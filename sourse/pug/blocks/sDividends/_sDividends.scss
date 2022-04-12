@@ -1,0 +1,28 @@
+// start .sDividends
+.sDividends {
+	h2 {
+		max-width: 1085px;
+	}
+	&__advantage-list {
+		list-style-type: none;
+		.icon {
+			padding-right: rem(27);
+			max-width: 143px;
+			stroke: $blue;
+		}
+		span {
+			font-weight: 900;
+		}
+	}
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDividends

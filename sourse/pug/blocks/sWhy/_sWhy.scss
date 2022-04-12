@@ -1,0 +1,23 @@
+// start .sWhy
+.sWhy {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		
+	p {
+		max-width: 640px
+	}
+	.active-text {
+		p {
+			max-width: 350px;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sWhy

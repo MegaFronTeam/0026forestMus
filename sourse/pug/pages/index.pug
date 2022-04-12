@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sReasons/_sReasons.pug
+include ../blocks/sPracticum/_sPracticum.pug
+include ../blocks/sDividends/_sDividends.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= Крез
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+	+top-nav()
+	+headerBlock
+	+sWhy()
+	+sReasons()
+	+sPracticum()
+	+sDividends()
+	//- +sForm()
+	//- - let list = items[0].title
+	//- p= list
+	.container
+		//- each item in items
+		//- 	li 
+		//- 		h2= item.title
+		//- 		p= item.text
+	//- +sContact()
+	
+	+footer()
+      
+
+
+

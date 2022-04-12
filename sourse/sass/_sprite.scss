@@ -1,0 +1,57 @@
+@use "sass:math";
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-basket {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(22,24)*1em;
+}
+.icon-check {
+	font-size:math.div(27,10)*1rem;
+	width: math.div(27,27)*1em;
+}
+.icon-dividends-arrow {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(146,18)*1em;
+}
+.icon-fb {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-instagram {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-magnet {
+	font-size:math.div(79,10)*1rem;
+	width: math.div(52,79)*1em;
+}
+.icon-telegram {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-trophy {
+	font-size:math.div(68,10)*1rem;
+	width: math.div(80,68)*1em;
+}
+.icon-viber {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-vk {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-wallet {
+	font-size:math.div(69,10)*1rem;
+	width: math.div(68,69)*1em;
+}
+.icon-whatsapp {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}

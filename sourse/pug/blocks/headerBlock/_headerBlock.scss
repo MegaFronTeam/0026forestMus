@@ -1,0 +1,118 @@
+// start .headerBlock
+.headerBlock {
+	margin-bottom: 1px;
+	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
+	// background-image: url(../img);
+	// background-color: #000000;
+	&__inner {
+		position: relative;
+		p {
+			margin-bottom: $grid-gutter-width;
+			max-width: 500px;
+			font-size: rem(24);
+			font-weight: 700;
+			line-height: 140%;
+		}
+
+		.btn {
+			margin-bottom: rem(91);
+		}
+	}
+	.h1 {
+		max-width: 710px;
+		margin-bottom: $grid-gutter-width;
+		font-weight: 900;
+		line-height: 96.3%;
+		text-transform: uppercase;
+	}
+
+	&__footer {
+		position: relative;
+		display: flex;
+		padding: rem(46) rem(56);
+		background-color: $blue;
+		background-image: url('../img/head-footer-bg.jpg');
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: 60% auto;
+		box-shadow: 0px 4px 50px rgba(90, 134, 235, 0.36);
+		border-radius: 8px;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(270deg, rgba(48, 77, 152, 0.75) 59.5%, rgba(49, 79, 155, 0) 71.51%);
+			}
+		p {
+			display: inline-block;
+			margin-left: auto;
+			max-width: 672px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 140%;
+			color: $white;
+			z-index: 10;
+		}
+	}
+
+	&__caption {
+		position: absolute;
+		top: 30px;
+		right: 0;
+		max-width: 150px;
+		span {
+			font-size: 16px;
+		}
+	}
+
+	// h1 {
+	// 	margin-bottom: 1px;
+	// }
+
+	// h2 {
+	// 	margin-bottom: 1px;
+	// }
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.headerBlock
