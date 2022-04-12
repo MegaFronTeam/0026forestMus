@@ -1,0 +1,42 @@
+// start .sTeam
+.sTeam {
+		// --sPT: ;
+		// --sPB: ;
+	--sTPB: #{rem(56)};
+	.active-text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 150%;
+		color: #1E1E1E;
+	}
+
+	.h3 {
+		margin-bottom: rem(49);
+	}
+	&__active-row {
+		margin-bottom: rem(88);
+	}
+	.active-text {
+		height: 100%;
+	}
+	&__list {
+		margin-bottom: rem(63);
+		list-style-type: none;
+		img {
+			margin-bottom: rem(44);
+		}
+		p {
+			font-size: 16px;
+			line-height: 160%;
+		}
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sTeam

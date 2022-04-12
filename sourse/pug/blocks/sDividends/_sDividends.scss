@@ -10,8 +10,24 @@
 			max-width: 143px;
 			stroke: $blue;
 		}
+		li {
+			margin-bottom: rem(25);
+		}
 		span {
 			font-weight: 900;
+		}
+	}
+
+	.active-text {
+		position: relative;
+		margin-bottom: 56px;
+		p {
+			max-width: 780px;
+		}
+		img {
+			position: absolute;
+			right: -60px;
+			bottom: -30px;
 		}
 	}
 		// --sPT: ;

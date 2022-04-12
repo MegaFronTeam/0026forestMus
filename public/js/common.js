@@ -359,7 +359,18 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
-
+	});
+	const knowingSlider = new Swiper('.sKnowing__slider--js', {
+		// slidesPerView: 5,
+		slidesPerView: 1,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
 	});
 	// modal window
 

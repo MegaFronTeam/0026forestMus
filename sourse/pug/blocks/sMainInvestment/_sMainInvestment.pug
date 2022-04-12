@@ -1,0 +1,23 @@
+mixin sMainInvestment(data)
+	// start sMainInvestment
+	+b.SECTION.sMainInvestment.section#sMainInvestment&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сегодня Вы&nbsp;можете совершить одну из&nbsp;главных инвестиций в&nbsp;Вашей жизни!
+			.row
+				.col.col-5
+					+e.primary-text.P Научитесь менять деньги на&nbsp;постоянный доход
+					p Только представьте, насколько это увлекательно!
+					p Как будто&nbsp;Вы регулярно кидаете монеты в&nbsp;копилку.
+					p Только за&nbsp;каждую монету Вам ещё и&nbsp;доплачивают...
+				.col.col-7.position-relative.d-flex
+					+img('img/maininvest-bg.png')
+					.active-text
+						p В&nbsp;этой копилке копится постоянный доход. Она регулярно приносит Вам деньги, причём сумма дохода также становится больше и&nbsp;больше с&nbsp;каждым разом
+						p Никакого волшебства. Дивидендные акции российских компаний&nbsp;&mdash; те&nbsp;самые курочки, несущие золотые яйца
+			+e.footer
+				p Каждая акция в&nbsp;Вашем портфеле&nbsp;&mdash; право на&nbsp;владение долей в&nbsp;бизнесе одной из&nbsp;крупнейших российских компаний. А&nbsp;также право на&nbsp;получение части их&nbsp;прибыли в&nbsp;виде дивидендов
+				.action-block
+					p Собирая такие акции, Вы&nbsp;выстраиваете своё личное владение среди крупнейшего бизнеса&nbsp;РФ и&nbsp;получаете растущие дивиденды вместе с&nbsp;ростом их&nbsp;бизнеса
+					+e(href="#").btn.btn.btn-primary Хочу уметь менять деньги на&nbsp;постоянный доход
+	// end sMainInvestment

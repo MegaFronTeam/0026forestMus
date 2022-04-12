@@ -1,0 +1,67 @@
+// start .sBenefits
+.sBenefits {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: #{rem(81)};
+	&__list {
+		margin-bottom: rem(78);
+		--bs-gutter-y: #{rem(90)};
+		align-items:center
+	}
+	img {
+		box-shadow: 0px 63px 73px -32px rgba(150, 195, 255, 0.36), 0px 94px 63px -51px rgba(0, 0, 0, 0.27);
+		border-radius: 8px;
+	}
+
+	&__text-wrap {
+		max-width: 530px;
+	}
+
+	&__item-title {
+		margin-bottom: rem(28);
+		font-weight: 700;
+		font-size: rem(24);
+		line-height: 140%;
+		color: #1E1E1E;
+	}
+	
+	h3 {
+		margin-bottom: rem(88);
+		color: #1E1E1E;
+	}
+	&__steps {
+		margin-bottom: rem(59);
+		font-size: 16px;
+		list-style-type: none;
+	}
+	&__step::before {
+		position: absolute;
+		top: -30%;
+		left: 0;
+		min-width: 44px;
+		content: counter(steps);
+		padding-right: rem(5);
+		padding-left: rem(5);
+		font-weight: 900;
+		font-size: 54px;
+		color: $blue;
+		background-image: url('../img/steps-bg.svg');
+		background-repeat: no-repeat;
+		background-position: center 80%;
+	}
+	&__step {
+		position: relative;
+		counter-increment:steps;
+		padding-left: rem(60);
+		p {
+			max-width: 268px;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBenefits

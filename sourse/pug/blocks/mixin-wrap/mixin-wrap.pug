@@ -28,3 +28,8 @@ mixin addblock()
 		+e.btn--minus(type="button")
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
+
+mixin action-block(p,btn)
+	+b.action-block
+		p!= p
+		+e(href="#").btn.btn.btn-primary!= btn

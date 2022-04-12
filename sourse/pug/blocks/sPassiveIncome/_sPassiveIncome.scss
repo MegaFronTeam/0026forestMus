@@ -1,0 +1,63 @@
+// start .sPassiveIncome
+.sPassiveIncome {
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(88)} ;
+	&__term {
+		display: inline-block;
+		padding-left: 8px;
+		padding-right: 8px;
+		background: $cyan;
+		border-radius: 4px;
+		color: $blue;
+		font-weight: 900;
+		& + span {
+			display: block;
+			padding: 0;
+			font-size: 12px;
+			font-weight: 900;
+			background-color: $white;
+		}
+	}
+	&__definition {
+		position: relative;
+		padding-left: rem(26);
+		&::after {
+			position: absolute;
+			content: '';
+			width: rem(16);
+			height: rem(16);
+			top: 8px;
+			left: -8px;
+			background-color: $white;
+			border: 1px solid $cyan;
+			border-radius: 50%;
+			box-shadow: 0px 4px 50px rgba(90, 134, 235, 0.36);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 1px;
+			height: 100%;
+			background-color: $cyan;
+		}
+		p {
+			margin-bottom: rem(41);
+		}
+	}
+	&__item:last-child {
+		.sPassiveIncome__definition:before {
+			height: 10%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPassiveIncome
