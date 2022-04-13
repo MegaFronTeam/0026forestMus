@@ -1,7 +1,39 @@
 .footer {
-		
+	background-color: #EEEFF2;		
 	margin-top: auto;
-
+	padding: rem(65) 0 rem(56);
+	color: $black;
+	a {
+		color: $black;
+		font-size: 16px;
+		text-decoration: underline;
+	}
+	ul {
+		list-style-type: none;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	img {
+		width: 163px;
+		height: 139px;
+	}
+	&__left {
+		.strong {
+			margin-bottom: rem(38);
+		}
+	}
+	&__right {
+		a:first-child {
+			border-right: 1px solid $black
+		}
+		p {
+			font-size: rem(16);
+		}
+	}
+	&__support {
+		margin-bottom: rem(61);
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

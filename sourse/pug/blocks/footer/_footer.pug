@@ -2,8 +2,30 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row
-				.col
-					
-				.col Footer
-				.col
+				+e.left.col
+					.strong
+						p 2008&ndash;2022&nbsp;&copy; издательство Info-DVD.Ru
+						p Проект &laquo;Инфоклуб&raquo;
+						p ОГРНИП 316183200118945
+					ul
+						li
+							a(href="#") экспертам-авторам (инфо-продюсирование)
+						li
+							a(href="#") партнёрская программа
+						li
+							a(href="#") политика конфиденциальности
+						li
+							a(href="#") предупреждение о&nbsp;рисках
 				.col-auto
+					+img('img/svg/logo.svg')
+				+e.right.col
+					+e.support
+						.strong Служба поддержки:
+						a(href="#") Задать свой вопрос
+						a(href="#") Частые вопросы и ответы на них
+					+e.support
+						.strong Позвоните нам:
+						a(href="#") 8 (800) 555-07-21
+						a(href="#") +7 (499) 553-09-74
+						p или оставьте свой номер и&nbsp;
+							a(href="#") мы&nbsp;вам перезвоним

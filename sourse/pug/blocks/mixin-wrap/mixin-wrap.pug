@@ -29,7 +29,9 @@ mixin addblock()
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
 
-mixin action-block(p,btn)
+mixin actionBlock(p,btn,block)
 	+b.action-block
 		p!= p
+		if block
+			block
 		+e(href="#").btn.btn.btn-primary!= btn

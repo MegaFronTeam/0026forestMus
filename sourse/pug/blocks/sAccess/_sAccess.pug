@@ -1,0 +1,26 @@
+mixin sAccess(data)
+	// start sAccess
+	+b.SECTION.sAccess.section#sAccess&attributes(attributes)
+		.container
+			+img('../img/access-bg.svg')(class"d-none d-lg-block")
+			+b.section-title
+				h2 Как получить доступ ко&nbsp;всему комплекту обучения прямо сегодня?
+			+e.row.row
+				mixin step(number,text)
+					+e.step&attributes(attributes)
+						+e.number= number
+						+e.text= text
+				.col-lg-4
+					+step('1','Заполните форму и нажмите кнопку «Продолжить».')
+				.col-lg-4
+					+step('2','Вам откроется страница с тарифами и доступными сейчас скидками')
+				.col-lg-4
+					+step('3','Если необходимо, Вас проконсультирует менеджер Инфо-ДВД по указанному Вами номеру телефона')
+				.col-lg-4
+				.col-lg-4.order-lg-last
+					+step('4','Выберите тариф участия, оплатите его стоимость')
+				.col-lg-4.order-lg-last
+					+step('5','Уже через одну минуту после оплаты Вам откроется доступ в закрытый раздел группы тренинга с обучающими материалами')(class="dashed-none")
+			
+			.row
+	// end sAccess

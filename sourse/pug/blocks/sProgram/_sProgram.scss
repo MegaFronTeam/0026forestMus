@@ -1,9 +1,106 @@
 // start .sProgram
 .sProgram {
+	background-image: url('../img/program-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: #1E1E1E;
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	h3 {
+		margin-bottom: rem(37);
+	}
+	.strong {
+		font-size: rem(24);
+	}
 
+	.dd-group  {
+		margin-bottom: rem(80);
+		&__item {
+		padding: rem(32);
+		background: $white;
+		box-shadow: 0px 29px 39px -18px rgba(201, 154, 154, 0.15), inset 0px -7px 0px #CEDDF0;
+		border-radius: 8px;
+			&.active .dd-group__head:after {
+				content: '-';
+			}
+		}
+		&__head {
+			position: relative;
+			margin-bottom: rem(16);
+			font-weight: 700;
+			font-size: rem(24);
+			color: $blue;
+			line-height: 1;
+			cursor: pointer;
+			&::after {
+				content: '+';
+				top: 0;
+				right: 0;
+				position: absolute;
+				font-weight: 700;
+				font-size: 24px;
+				transition: content .3s ease-in-out;
+			}
+			p {
+				max-width: 1035px;
+				padding-top: 16px;
+				color: #1E1E1E;
+				font-size: rem(20);
+			}
+		}
+		&__content {
+			&:not(.active) {
+				display: none;
+			}
+			ul {
+				padding: 0;
+				margin-left: rem(20);
+				line-height: 160%;
+			}
+			li {
+				margin-bottom: rem(10);
+			}
+		} 
+	}
+	&__defenitions {
+		display: inline-block;
+		margin-right: rem(20);
+		margin-bottom: rem(30);
+	}
+	&__online-list {
+		padding: 0;
+		margin-left: rem(20);
+	}
+	&__note {
+		font-size: rem(16);
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+	h4 {
+		margin-bottom: 37px;
+	}
+	&__schedule {
+		list-style-type: none;
+		--bs-gutter-y: #{rem(32)};
+		margin-bottom: rem(80);
+	}
+	.schedule-item {
+		padding: rem(25) rem(30);
+		height: 100%;
+		background: $white;
+		box-shadow: 0px 29px 39px -18px rgba(20, 20, 20, 0.15), inset 0px -7px 0px #CEDDF0;
+		border-radius: 8px;
+		&__date {
+			font-weight: 700;
+			font-size: 30px;
+			color: $blue;
+		}
+		&__day {
+			font-size: 16px;
+		}
+	}
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -1,0 +1,71 @@
+// start .sAction
+.sAction {
+	background: linear-gradient(332.05deg, rgba(199, 208, 234, 0.37) 19.87%, rgba(0, 117, 255, 0.04) 92.7%);
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__centred-block {
+		margin: 0 auto;
+		max-width: 900px;
+		.btn {
+			margin-top: rem(30);
+		}
+	}
+	.action-block {
+		margin-bottom: rem(65);
+	}
+	.strong {
+		margin-bottom: rem(56);
+		font-weight: 700;
+		font-size: rem(24);
+		line-height: 140%;
+		color: $blue;
+	}
+	.row {
+		margin-bottom: rem(78);
+	}
+	.cross {
+		position: relative;
+		margin-left: 8px;
+		margin-bottom: rem(28);
+		width: 4px;
+		height: 16px;
+		background-color:$blue;
+		transform: rotate(45deg);
+		&::after {
+			content: '';
+			position:absolute;
+			top: 0;
+			right: 0;
+			width: 4px;
+			height: 16px;
+			background-color:$blue;
+			transform: rotate(90deg);
+		}
+		& + p {
+			font-size: 16px;
+		}
+		
+	}
+	&__buttons-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		p {
+			margin-bottom: rem(24);
+			font-size: rem(24);
+			font-weight: bold;
+			color: #565656;			
+		}
+		.btn-outline-primary {
+			margin-right: rem(20);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAction

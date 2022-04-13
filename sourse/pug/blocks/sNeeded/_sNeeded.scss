@@ -1,0 +1,95 @@
+// start .sNeeded
+.sNeeded {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	.strong {
+		font-size: rem(24);
+		margin-bottom: rem(80);
+	}
+	&__list {
+		list-style-type: none;
+		margin-top: rem(160);
+		margin-bottom: rem(80);
+		li {
+			position: relative;
+		}
+	}
+	.number {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: -55%;
+		color: $cyan;
+		font-size: rem(150);
+		font-weight: 900;
+		z-index: -1;
+	}
+	.points {
+		width: 16px;
+		height: 16px;
+		margin: 0 32px;
+		background-color: $cyan;
+		&::after,
+		&::before {
+			width: 16px;
+			height: 16px;
+			background-color: $cyan;
+		}
+		&::before {
+			left: -32px;
+		}
+		&::after {
+			right: -32px;
+		}
+	}
+
+	img {
+		box-shadow: 0px 63px 73px -32px rgba(150, 195, 255, 0.36), 0px 94px 63px -51px rgba(0, 0, 0, 0.27);
+	border-radius: 8px;
+	}
+
+	.skills-list {
+		padding: 0;
+    margin-left: 20px;
+		margin-bottom: rem(120);
+		li {
+			padding-left: rem(20);
+			margin-bottom: rem(10);
+			list-style-image: url(../img/practicum-marker.svg);
+		}
+	}
+
+	&__summary {
+		justify-content: space-between;
+	}
+	&__summary-left {
+		display: inline-block;
+		max-width: 530px;
+	} 
+	&__summary-right {
+		position: relative;
+		display: inline-block;
+		padding-left: rem(40);
+		max-width: 450px;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 130%;
+		&::before {
+			position: absolute;
+			content: url('../img/needed-icon.png');
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNeeded

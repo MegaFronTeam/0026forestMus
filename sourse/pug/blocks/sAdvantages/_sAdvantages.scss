@@ -1,0 +1,57 @@
+// start .sAdvantages
+.sAdvantages {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	h2 {
+		max-width: 700px;
+	}
+	dl {
+		max-width: 700px;
+	}
+	dt {
+		margin-bottom: rem(14);
+		font-size: rem(24);
+		display: flex;
+		align-items: center;
+	}
+	dd {
+		margin-bottom: rem(40);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAdvantages
+.points {
+	position: relative;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 20px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: $blue;
+	// bottom:10px;
+	line-height: 1;
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		top: 0;
+		border-radius: 50%;
+		background-color: $blue;
+	}
+	&::before {
+		left: -10px;
+	}
+	&::after {
+		right: -10px;
+	}
+}
