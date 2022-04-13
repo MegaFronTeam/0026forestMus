@@ -1,31 +1,56 @@
 mixin footer()
-	+b.FOOTER.footer
+	footer.footer
 		.container
+			.before
+				+logo('#034471',"163", "139")
 			.row
-				+e.left.col
-					.strong
-						p 2008&ndash;2022&nbsp;&copy; издательство Info-DVD.Ru
-						p Проект &laquo;Инфоклуб&raquo;
-						p ОГРНИП 316183200118945
-					ul
-						li
-							a(href="#") экспертам-авторам (инфо-продюсирование)
-						li
-							a(href="#") партнёрская программа
-						li
-							a(href="#") политика конфиденциальности
-						li
-							a(href="#") предупреждение о&nbsp;рисках
-				.col-auto
-					+img('img/svg/logo.svg')
-				+e.right.col
-					+e.support
-						.strong Служба поддержки:
-						a(href="#") Задать свой вопрос
-						a(href="#") Частые вопросы и ответы на них
-					+e.support
-						.strong Позвоните нам:
-						a(href="#") 8 (800) 555-07-21
-						a(href="#") +7 (499) 553-09-74
-						p или оставьте свой номер и&nbsp;
-							a(href="#") мы&nbsp;вам перезвоним
+				.col-md
+					.footer__left-col
+						.footer__txt.footer__txt--h6
+							p
+								script.
+									function InfoDVDCurrentYear(year) {
+										var cur = new Date();
+										if (cur.getFullYear() != year)
+											document.write(year + '&mdash;' + cur.getFullYear());
+										else document.write(year);
+									}
+									InfoDVDCurrentYear('2008');
+								|   © издательство
+								| 
+								a(href='//www.info-dvd.ru/?utm_source=footer_link'  target='_blank') Info-DVD.Ru
+								br
+								| Проект «
+								a(href='//www.infoclub.info/'  target='_blank') Инфоклуб
+								| »
+								br
+								script(src='//info-dvd.ru/codes/js/legal.utf8.js')
+						.footer__txt
+							p
+								a.tdu(href='//info-dvd.ru/professional/', target='_blank', title='экспертам-авторам (инфо-продюсирование)')
+									| экспертам-авторам (инфо-продюсирование)
+								br
+								a.tdu(href='//info-dvd.ru/about/partnership', target='_blank', title='партнёрская программа')
+									| партнёрская программа
+								br
+								a.tdu(href='//info-dvd.ru/pages/privacy', target='_blank', title='политика конфиденциальности')  политика конфиденциальности
+								br
+								a.tdu(href='//info-dvd.ru/pages/risk-warning', target='_blank', title='предупреждение о рисках')  предупреждение о рисках
+				.col-md-5
+					.footer__right-col
+						.footer__txt
+							p
+								| #[strong.h6 Служба поддержки:]
+								a.tdu(href='//info.support-desk.ru/form', target='_blank', title='Задать свой вопрос') Задать свой вопрос
+								span.spiner |
+								a.tdu(href='//info.support-desk.ru/?base=1', target='_blank' title='Частые вопросы и ответы на них') Частые вопросы и ответы на них
+						.footer__txt
+							p
+								strong.h6  Позвоните нам:
+								span
+									script(   src='//info-dvd.ru/codes/js/telephone-number.js')
+								br
+								| или 
+								a.tdu(href='//info-dvd.ru/support/apply/', target='_blank') оставьте свой номер 
+								| &nbsp;и мы вам перезвоним
+

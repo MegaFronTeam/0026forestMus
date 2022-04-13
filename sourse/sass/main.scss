@@ -126,6 +126,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sAccess/_sAccess.scss';
 @import '../pug/blocks/sFAQ/_sFAQ.scss';
 @import '../pug/blocks/sAction/_sAction.scss';
+@import '../pug/blocks/sTariffs/_sTariffs.scss';
+@import '../pug/blocks/sAddAsist/_sAddAsist.scss';
+@import '../pug/blocks/sQuestions/_sQuestions.scss'; 
 
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';

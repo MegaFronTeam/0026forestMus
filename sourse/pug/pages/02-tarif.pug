@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+
+include ../blocks/sTariffs/_sTariffs.pug
+include ../blocks/sAddAsist/_sAddAsist.pug
+include ../blocks/sQuestions/_sQuestions.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'page-without-menu-js tarif-page'
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	//- +top-nav()
+	//- +headerBlock
+	+sTariffs()
+	//- +sAddAsist()
+	+sQuestions
+	+footer()
+	
