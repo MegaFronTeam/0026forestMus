@@ -1,15 +1,18 @@
 // start .sWhy
 .sWhy {
-		// --sPT: ;
+		--sPT:#{rem(28)} ;
 		// --sPB: ;
-		// --sTPB: ;
+		--sTPB:#{rem(48)};
 		
 	p {
 		max-width: 640px
 	}
 	.active-text {
 		p {
-			max-width: 350px;
+			@include media-breakpoint-up(lg) {
+				max-width: 350px;
+
+			}
 		}
 	}
 

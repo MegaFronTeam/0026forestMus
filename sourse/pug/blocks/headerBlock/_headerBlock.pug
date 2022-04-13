@@ -5,12 +5,12 @@ mixin headerBlock()
 		.container
 			+e.inner
 				.h1 Как создать постоянный растущий доход?
-				//- +e.img-wrap
-				//- 	+img("img/head-img.png")
+				+e.img-wrap.d-none.d-lg-block
+					+img("img/head-img.png")
 				+e.body
 					p Воспользуйтесь уникальной исторической ситуацией на&nbsp;фондовом рынке&nbsp;РФ, чтобы стать совладельцем крупнейших компаний России и&nbsp;получать часть их&nbsp;прибыли в&nbsp;виде дивидендов
 					a.btn.btn-primary(href="#") Подробнее
-					+e.caption Павел Крез <span>Эксперт в&nbsp;трейдинге</span>
+					+e.caption.d-none.d-lg-block Павел Крез <span>Эксперт в&nbsp;трейдинге</span>
 			+e.footer
 				p В&nbsp;период обвала российского фондового рынка весной 2022 крупнейшие инвестиционные компании США JPMorgan и&nbsp;Goldman Sachs принялись скупать резко подешевевшие российские активы
 			

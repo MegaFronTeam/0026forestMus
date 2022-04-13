@@ -1,12 +1,19 @@
 // start .headerBlock
 .headerBlock {
+	padding-top: 8.5%;
 	margin-bottom: 1px;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
+	background-image: url(../img/head-bg.png);
 	// background-color: #000000;
 	&__inner {
 		position: relative;
+		@include media-breakpoint-down(xl) {
+			padding-bottom: 200px;
+		}
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 0;
+		}
 		p {
 			margin-bottom: $grid-gutter-width;
 			max-width: 500px;
@@ -25,19 +32,32 @@
 		font-weight: 900;
 		line-height: 96.3%;
 		text-transform: uppercase;
+		letter-spacing: rem(-4);
 	}
-
+	&__img-wrap {
+		bottom: -13%;
+    position: absolute;
+    right: -10%;
+    z-index: 10;
+		@include media-breakpoint-down(xl) {
+			bottom: -10%;
+			right: -30%;
+		}
+	}
 	&__footer {
 		position: relative;
 		display: flex;
-		padding: rem(46) rem(56);
+		padding: rem(48) rem(56);
 		background-color: $blue;
 		background-image: url('../img/head-footer-bg.jpg');
 		background-repeat: no-repeat;
+		background-size: auto 100%;
 		background-position: left center;
-		background-size: 60% auto;
 		box-shadow: 0px 4px 50px rgba(90, 134, 235, 0.36);
 		border-radius: 8px;
+		@include media-breakpoint-up(xl) {
+			background-size: 60% auto;
+		}
 		&::after {
 			content: '';
 			position: absolute;
@@ -61,8 +81,8 @@
 
 	&__caption {
 		position: absolute;
-		top: 30px;
-		right: 0;
+		top: 7%;
+		right: 2%;
 		max-width: 150px;
 		span {
 			font-size: 16px;

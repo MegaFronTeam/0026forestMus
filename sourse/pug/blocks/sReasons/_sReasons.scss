@@ -1,8 +1,12 @@
 // start .sReasons
 .sReasons {
-		// --sPT: ;
+		--sPT: #{rem(40)};
 		// --sPB: ;
-		// --sTPB: ;
+		// --sTPB: #{rem(20)};
+	h2 	{
+		line-height: 102.3%;
+		margin-bottom: rem(68);
+	}
 	&__list {
 		margin-bottom: rem(78);
 	}
@@ -11,6 +15,9 @@
 		display: inline-block;
 		width: auto;
 		background-blend-mode: lighten, normal, normal;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(30);
+		}
 		&::after {
 			content: '';
 			position: absolute;
@@ -33,6 +40,7 @@
 	}
 	&__number {
 		position: relative;
+		// margin-right: rem(20);
 		font-weight: 900;
 		font-size: rem(54);
 		line-height: 1;
@@ -85,9 +93,13 @@
 	}
 
 	&__advantage-list {
-		margin-bottom: rem(103);
+		margin-bottom: rem(113);
+		--bs-gutter-y: #{rem(30)};
 		img {
 			margin-bottom: rem(55);
+			@include media-breakpoint-down(md) {
+				margin-bottom: rem(10);
+			}
 		}
 		p {
 			margin-bottom: 0;
@@ -100,13 +112,20 @@
 
 	.active-text {
 		position: relative;
+		padding: rem(40) rem(50);
 		p {
 			max-width: 832px;
 		}
 		img {
 			position: absolute;
-			right: -30px;
-			bottom: -30px;
+			bottom: -16%;
+			right: -30%;
+			@include media-breakpoint-up(xl) {
+				right: -2%;
+			}
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
 		}
 	}
 	
