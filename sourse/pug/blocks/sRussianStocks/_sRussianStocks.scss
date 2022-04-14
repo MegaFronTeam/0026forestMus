@@ -1,22 +1,39 @@
 // start .sRussianStocks
 .sRussianStocks {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: #{rem(78)};
+		--sPB:  #{rem(20)};
 		--sTPB: #{rem(58)};
-	&__list{
+	.section-subtitle {
+		margin-bottom: rem(13);
+	}
+	.row {
+		position: relative;
+	}
+	ul{
 		padding: 0;
     margin-left: 20px
 	}
-	&__item {
+	li {
 		margin-bottom: rem(20);
-		padding-left: rem(20);
+		padding-left: rem(30);
 		line-height: 160%;
 		list-style-image: url(../img/practicum-marker.svg);
 		color: #1E1E1E;
 	}
+	&__img-wrap {
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			height: 300px;
+			overflow: hidden;
+		}
+	}
 	img {
 		box-shadow: 0px 63px 73px -32px rgba(150, 195, 255, 0.36), 0px 94px 63px -51px rgba(0, 0, 0, 0.27);
 		border-radius: 8px;
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			margin-top: -75%;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

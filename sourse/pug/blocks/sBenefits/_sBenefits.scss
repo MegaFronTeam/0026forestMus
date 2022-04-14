@@ -1,20 +1,77 @@
 // start .sBenefits
 .sBenefits {
-		// --sPT: ;
-		// --sPB: ;
-		--sTPB: #{rem(81)};
+		--sPT: #{rem(27)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(73)};
+		.section-subtitle {
+			margin-bottom: rem(16);
+		}
 	&__list {
 		margin-bottom: rem(78);
 		--bs-gutter-y: #{rem(90)};
 		align-items:center
 	}
+	&__img-wrap-left,
+	&__img-wrap-right {
+		position: relative;
+		&::before {
+			position: absolute;
+			width: 200%;
+			height: 200%;
+			top: -8%;
+			content: '';
+			z-index: -1;
+			display: inline-block;
+			background-image: url('../img/benefits-bg.png');
+			background-repeat: no-repeat;
+			background-size: 482px 408px;
+		}
+	}
+	&__img-wrap-left {
+		&::before {
+			left: -30%;
+		}
+	}
+	&__img-wrap-right {
+		&::before {
+			right: -140%;
+			top: 68px;
+		}
+	}
 	img {
+		max-width: 100%;
 		box-shadow: 0px 63px 73px -32px rgba(150, 195, 255, 0.36), 0px 94px 63px -51px rgba(0, 0, 0, 0.27);
 		border-radius: 8px;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(30);
+		}
 	}
 
 	&__text-wrap {
 		max-width: 530px;
+		padding-top: rem(25);
+		span {
+			display: block;
+		}
+	}
+
+	&__item {
+		margin-bottom: rem(90);
+		&:nth-child(even) {
+			.row {
+				flex-direction: row-reverse;
+			}
+		}
+		&:nth-child(odd) {
+			.sBenefits__text-wrap {
+				@include media-breakpoint-up(lg) {
+					margin-left: auto;
+				}
+			}
+		}
+		&:last-child {
+			margin-bottom: rem(80);
+		}
 	}
 
 	&__item-title {
@@ -28,16 +85,17 @@
 	h3 {
 		margin-bottom: rem(88);
 		color: #1E1E1E;
+		letter-spacing: -0.8px;
 	}
 	&__steps {
-		margin-bottom: rem(59);
+		margin-bottom: rem(10);
 		font-size: 16px;
 		list-style-type: none;
 	}
 	&__step::before {
 		position: absolute;
-		top: -30%;
-		left: 0;
+		top: -22%;
+		left: 5%;
 		min-width: 44px;
 		content: counter(steps);
 		padding-right: rem(5);
@@ -52,9 +110,17 @@
 	&__step {
 		position: relative;
 		counter-increment:steps;
-		padding-left: rem(60);
+		padding-left: rem(80);
+		&:not(:last-child) {
+			margin-bottom: rem(35);
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
 		p {
-			max-width: 268px;
+			@include media-breakpoint-up(sm) {
+				max-width: 268px;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}
