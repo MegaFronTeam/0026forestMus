@@ -1,7 +1,11 @@
 
 :root {
 	--animate-delay: 1.2s;
-	--bs-body-font-size: #{$em-base};
+	
+	@include media-breakpoint-up(md) {
+		--bs-body-font-size: #{$em-base};
+	}
+	--bs-body-font-size: 18px;
 
 	@include media-breakpoint-up(md) {
 
@@ -15,7 +19,7 @@
 	--sTPB: #{rem(40 * .5)};
 
 
-		--swiperArrowSize: #{rem(68)};
+		--swiperArrowSize: #{rem(32)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
 		--swiperBorderColorDef: var(--bs-primary);
 		--swiperColorDef: var(--bs-primary);

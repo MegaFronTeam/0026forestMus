@@ -1,17 +1,32 @@
 // start .sDividends
 .sDividends {
+	padding-top: rem(86);
+	.section-subtitle {
+		margin-bottom: rem(16);
+	}
+	.section-title {
+		margin-bottom: rem(47);
+	}
 	h2 {
 		max-width: 1085px;
+		line-height: 102.3%;
 	}
 	&__advantage-list {
+		margin-bottom: rem(47);
 		list-style-type: none;
 		.icon {
-			padding-right: rem(27);
-			max-width: 143px;
+			margin-right: rem(27);
+			width: 143px;
 			stroke: $blue;
+			@include media-breakpoint-down(md) {
+				width: 50px;
+			}
 		}
 		li {
-			margin-bottom: rem(25);
+			margin-bottom: rem(32);
+			p {
+				max-width: 815px;
+			}
 		}
 		span {
 			font-weight: 900;
@@ -20,14 +35,24 @@
 
 	.active-text {
 		position: relative;
+		padding: rem(39) rem(55) rem(43);
 		margin-bottom: 56px;
 		p {
 			max-width: 780px;
 		}
 		img {
+			display: none;
 			position: absolute;
-			right: -60px;
-			bottom: -30px;
+			@include media-breakpoint-up(xl) {
+				display: block;
+				right: -6%;
+				bottom: -13%;
+			}
+			@include media-breakpoint-up(lg) {
+				display: block;
+				right: -30%;
+				bottom: -45%;
+			}
 		}
 	}
 		// --sPT: ;

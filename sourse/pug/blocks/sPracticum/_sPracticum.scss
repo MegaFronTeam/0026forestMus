@@ -1,42 +1,46 @@
 // start .sPracticum
 .sPracticum {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: #{rem(52)};
+		--sPB: 0;
 		// --sTPB: ;
+	.section-subtitle {
+		margin-bottom: rem(15);
+	}
+	.row {
+		margin-bottom: rem(35);
+	}
 	&__img-wrap {
 		position: relative;
-		background-image: url('../img/practicum-bg.png');
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		background-position: top center;
+		// background-image: url('../img/practicum-bg.png');
+		// background-repeat: no-repeat;
+		// background-size: 100% auto;
+		// background-position: top center;
 		img {
 			position: absolute;
 			top:44%;
 			left:50%;
 			transform:translate(-50%, -50%);
+			@include media-breakpoint-down(md) {
+				transform:none;
+				position: static;
+				width: 100%;
+				object-fit: contain;
+			}
 		}
 	}
 	&__list {
 			list-style-image: url('../img/practicum-marker.svg');
 		li {
-			padding-left: rem(22);
+			padding-left: rem(16);
+			margin-bottom: rem(22);
+			margin-left: rem(20);
+		}
+	}
+	.action-block {
+		.btn {
 			margin-bottom: rem(30);
 		}
 	}
-	// }
-	// li {
-	// 	&::marker {
-	// 		content: url('../img/practicum-marker.svg');
-	// 		margin-right: rem(22);
-	// 	}
-	// }
-	// li {
-  //   list-style-type: none; /* Убираем маркеры у списка */
-  //  }
-  //  li:before {
-  //   content: "ƥ "; /* Добавляем в качестве маркера символ */
-  //  }
-
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

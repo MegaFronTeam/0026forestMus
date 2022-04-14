@@ -1,5 +1,49 @@
 .sTariffs {
-	
+	padding-top: 0;
+	&__head-inner{
+		position: relative;
+		overflow: hidden;
+	}
+	&__head{
+		p{
+			margin-bottom: 0;
+		}
+		background: linear-gradient(332.05deg, rgba(199, 208, 234, 0.37) 19.87%, rgba(0, 117, 255, 0.04) 92.7%); 
+		position: relative;
+		z-index: 2;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 120%;
+			background-image: url(../img/@2x/webp/grafs.webp);
+			background-size: cover;
+			pointer-events: none;
+			z-index: -1;
+		}
+		img{
+			z-index: -1;
+			position: absolute;
+			top: -100px;
+			right: -250px;
+			max-width: 720px;
+		}
+		.container{
+			position: relative;
+			padding: rem(56) 0;
+		}
+		p{
+			font-weight: bold;
+			@include rfs(30px);
+		}
+	}
+	h1{
+		text-transform: uppercase;
+		@include rfs(70px);
+
+	}
 	&__table-wrap{
 		overflow-x: auto;
 		margin-bottom: rem(50);
@@ -152,10 +196,18 @@
 			width: 100%;
 			justify-content: flex-start;
 		}
+		justify-content: center;
 		span{
 			position: relative;
-			width: rem(104);
-			height: rem(104);
+			@include media-breakpoint-up(md) {
+
+				width: rem(104);
+				height: rem(104);
+				font-size: rem(40);
+			}
+			font-size: rem(30);
+			width: rem(60);
+			height: rem(60);
 			background: $white;
 			border-radius: rem(10px);
 			display: inline-flex;
@@ -164,7 +216,6 @@
 
 			//txt
 			//font-family: $gotham-pro;
-			font-size: rem(40);
 			color: darken($primary, 15);
 			line-height: rem(72px);
 			text-align: center;
@@ -173,9 +224,13 @@
 			// &:first-child{
 			// 	margin-right: rem(28);
 			// }
-			margin-right: rem(40);
+			@include media-breakpoint-up(md) {
+
+				margin-right: rem(40);
+			}
+			margin-right: rem(20);
 			&:last-child{
-				margin-right: 0;
+				margin-right: 0 !important;
 			}
 
 			//after =>  'дней'
@@ -211,7 +266,11 @@
 				content: ':';
 				position: absolute;
 				left: 100%;
-				width: rem(40);
+				@include media-breakpoint-up(md) {
+
+					width: rem(40);
+				}
+				width: rem(20);
 				text-align: center;
 				top: 0;
 				height: 100%;
@@ -236,7 +295,7 @@
 
 	//timer-col
 	&__timer-col{
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(xl){
 			padding: 8px 0  0 27px;
 		}
 	}

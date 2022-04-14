@@ -3,11 +3,11 @@ mixin sTariffs()
 	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
 		block
 		+e.head
-			.container
-		+e.page-cont.container
-			+b.section-title
-				h1 Павел Крёз и Инфо-ДВД  Пассивный доход в РФ. Дивиденды
-				p Выберите удобный пакет участия в тренинге
+			+e.head-inner
+				.container  
+					h1 Павел Крёз и Инфо-ДВД  Пассивный доход в РФ. Дивиденды
+					p Выберите удобный пакет участия в тренинге
+					+img("img/head-img.png").d-none.d-xl-block
 		+e.body
 			.container
 				+e.table-wrap
@@ -110,11 +110,12 @@ mixin sTariffs()
 					+e.timer-row.row
 						.col-lg
 							+e.timer-txt ! Персональное предложение со скидкой обновляется каждые 24 часа. Скидка может сгореть при следующем обновлении, которое состоится через:
-						+e.timer-col.col-auto
+						+e.timer-col.col-lg-auto
 							+e.timer-box.timer-box-js
 								span.days 12
 								span.hours 20
-								span.minutes 20
+								span.minutes 20 
+								span.seconds 20
 					
 	// end sTariffs
 
