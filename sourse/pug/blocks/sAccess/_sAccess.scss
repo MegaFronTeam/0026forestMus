@@ -3,6 +3,9 @@
 	.container {
 		position: relative;
 	}
+	.section-title {
+		margin-bottom: rem(60);
+	}
 	&__number {
 		font-size: rem(40);;
 		border-radius: 50%;
@@ -54,8 +57,8 @@
 				right: 93.2%;
 			}
 			@include media-breakpoint-up(lg) {
-				top: 25%;
-				right: 1%;
+				top: 32%;
+				right: 3%;
 			}
 			@include media-breakpoint-only(lg) {
 				right: -1%;

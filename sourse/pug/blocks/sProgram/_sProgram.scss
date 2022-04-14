@@ -4,16 +4,16 @@
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	color: #1E1E1E;
-		// --sPT: ;
+		--sPT: #{rem(97)} ;
 		// --sPB: ;
-		// --sTPB: ;
+		--sTPB: #{rem(35)};
 	h3 {
 		margin-bottom: rem(37);
 	}
 	.strong {
 		font-size: rem(24);
 	}
-
+	
 	.dd-group  {
 		margin-bottom: rem(80);
 		&__item {
@@ -93,7 +93,7 @@
 		border-radius: 8px;
 		&__date {
 			font-weight: 700;
-			font-size: 30px;
+			font-size: rem(30);
 			color: $blue;
 		}
 		&__day {

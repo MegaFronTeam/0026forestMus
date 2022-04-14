@@ -20,7 +20,7 @@
 			position: relative;
 			padding-bottom: rem(40);
 			font-weight: 700;
-			font-size: 30px;
+			font-size: rem(30);
 			&::after {
 				position: absolute;
 				right: 0;
@@ -52,10 +52,18 @@
 	&__title {
 		margin-bottom: rem(65);
 		font-weight: 900;
-		font-size: rem(70);
+		font-size: rem(30);
 		line-height: 96.3%;
 		text-transform: uppercase;
 		color: #1E1E1E;
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(70);
+			text-align: left;
+		}
+		@include media-breakpoint-up(sm) {
+			font-size: rem(40);
+		}
 	}
 	// &__row {
 	// 	p {

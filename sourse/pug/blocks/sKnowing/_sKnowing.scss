@@ -17,6 +17,10 @@
 		ul {
 			padding: 0;
 			margin-left: 20px;
+			margin-top: -10%;
+			@include media-breakpoint-up(xl) {
+				margin-top: 0;
+			}
 		}
 		li {
 			padding-left: rem(28);
@@ -37,6 +41,10 @@
 				position: relative;
 				left: -15%;
 			}
+			@include media-breakpoint-down(md) {
+				position: relative;
+				left: -45%;
+			}
 		}
 	}
 	h3 {
@@ -56,6 +64,7 @@
 		width: auto;
 		height: 100%;
 		img {
+			max-width: 100%;
 			box-shadow: 0px 63px 73px -32px rgba(150, 195, 255, 0.36), 0px 94px 63px -51px rgba(0, 0, 0, 0.27);
 			border-radius: 20px;
 		}
@@ -95,13 +104,17 @@
 	}
 	&__program {
 		padding-top: rem(76);
+		--bs-gutter-y: #{rem(40px)};
 		p {
 			font-size: 16px;
 			&::before {
 				content: url('../img/knowing-icon.png');
 				position: absolute;
-				top: -32%;
+				top: -45px;
 				left: 18px;
+				@include media-breakpoint-up(lg) {
+					top: -65px;
+				}
 			}
 		}
 		ul {
