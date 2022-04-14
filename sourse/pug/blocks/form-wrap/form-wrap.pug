@@ -80,16 +80,15 @@ mixin policy()
 
 mixin form-cont()
 	+b.form-cont#form-cont
-		//- if block
-		//- 	block
-		//- else
-		+e.text
-			+e.form-title Успейте оставить заявку на&nbsp;участие в тренинге
-			+e.form-txt Введите свои данные прямо сейчас
-		+e.man-img
-			img.lazy(src='#' data-src="img/@2x/form-man.png" alt="")
-		+form-wrap()
-			+input('Ваше имя', 'text', '', 'fullname')(required)
-			+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required)
-			+input('E-mail (необязательно)', 'email','','email')
-			+e.BUTTON.submit-btn(type="submit") Получить доступ в мастер-группу
+		.row
+			+e.col.col 
+					+e.title Успейте оставить заявку на&nbsp;участие в тренинге
+					+e.txt Введите свои данные прямо сейчас 
+			.col-md-auto
+				+form-wrap()
+					+input('Ваше имя', 'text', '', 'fullname')(required)
+					+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required)
+					+input('E-mail (необязательно)', 'email','','email')
+					+e.BUTTON.btn(type="submit") Отправить
+			.col-lg
+				+pic("form-man.png",'',0)

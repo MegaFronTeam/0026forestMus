@@ -1,9 +1,6 @@
 // start .sQuestions
 .sQuestions {
-	position: relative;
-	overflow: hidden;
-	background-color: $primary;
-	color: $white;
+ 
 
 	padding: rem(30) 0;
 	@include media-breakpoint-up(lg){
@@ -21,6 +18,11 @@
 		position: relative;
 		z-index: 1;
 	}
+	p{
+		@include media-breakpoint-up(lg){
+			
+		}
+	}
 	.section-title{
 		@include media-breakpoint-up(sm){
 			padding-bottom: rem(20);
@@ -29,14 +31,15 @@
 			padding-bottom: rem(41px);
 		}
 		h2{
-			margin-bottom: rem(20);
-			color: $white;
+			margin-bottom: rem(20); 
 		}
 		p{
 			font-weight: bold;
 			line-height: calc(25/20);
+			padding-right: 0;
 
 			font-size: rem(16px);
+			
 			@include media-breakpoint-up(sm){
 				font-size: rem(20px);
 				padding-left: 3px;
@@ -103,21 +106,19 @@
 	}
 	//lower txt
 	&__lower-txt{
-		max-width: 1007px;
+		// max-width: 1007px;
+		@include media-breakpoint-up(lg){
+		padding-right: rem(200);
+		}
 		p{
 			font-weight: 500;
 			line-height: 1.5;
 
-			font-size: rem(16px);
-			@include media-breakpoint-up(sm){
-				font-size: rem(20px);
-			}
+			font-size: rem(20px);
 
 			margin-bottom: rem(30px);
 		}
-		p:last-child{
-			margin-bottom: 0;
-		}
+ 
 
 		padding-bottom: rem(30);
 		@include media-breakpoint-up(lg){
@@ -140,15 +141,14 @@
 		font-size: rem(12px);
 		line-height: calc(15/12);
 		text-align: center;
-		color: rgba($white, .5);
+		color: rgba(#565656, .5);
 
-		a{
-			@include mt();
+		a{ 
 			text-decoration: underline;
-			color: rgba($white, .5);
+			color: rgba(#565656, .5);
 			&:hover{
 				text-decoration: none;
-				color: $white;
+				color: #565656;
 			}
 		}
 	}

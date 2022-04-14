@@ -2,66 +2,121 @@ mixin sTariffs()
 	// start sTariffs
 	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
 		block
-		+pic('sTarif-left-bg.png')(class="sTariffs__left-bg")
-		+pic('sTarif-right-bg.png')(class="sTariffs__right-bg")
-		+e.page-cont.container
-			+b.section-title
-				h2 Выберите удобный пакет участия в тренинге
-			+e.table-row.row
-				+priceTableHeader('Эконом', 'Мастер', 'VIP')
-				+priceTableLine('I часть. Основная программа тренинга. Безлимитный доступ к материалам')
-				+priceTableLine('II часть. Онлайн-занятия тренинга. Доступ на прямой эфир и безлимитный доступ к записям занятий.')
-				+priceTableLine('Поддержка и обратная связь от автора в группе и на онлайн-занятиях', 'до 25.09.2020', 'до 25.12.2020', 'до 25.12.2020')
-				+priceTableLine('Мастер-группа Павла Крёза', '-' , '3 месяца' ,'3 месяца')
-				+priceTableLine('Продление мастер-группы по льготной стоимости', '-' , '+' ,'-')
-				+priceTableLine('Индивидуальные скайп-сессии с автором после окончания программы', '-', '-', '6 сессий')
-				+priceTableLine('Индивидуальная поддержка от автора в скайпе', '-', '-', '3 месяца')
-				+strokedLine('Базовая цена пакета', '29 000' , '42 000' ,'140 000')
-				+priceTableLine('Ваша цена сегодня', '18 000' , '26 000' ,'80 000')
-				+priceTableFooter('Выбрать Эконом', 'Выбрать Мастер', 'Выбрать VIP')
-			+e.timer-row.row
-				.col-lg-6
-					+e.timer-headline
-						| ПОЛУЧИТЕ ДОСТУП
-						|
-						br.d-none.d-xl-block
-						| ПРЯМО СЕЙЧАС!
-					+e.timer-txt Доступ к&nbsp;материалам&nbsp;I части тренинга будет открыт Вам&nbsp;через одну минуту после оплаты.
-				+e.timer-col.col
-					+e.timer-col-txt
-						p Сегодня действуют максимальные скидки на пакеты участия!
-						p Скидка сгорит через:
-					+e.timer-box.timer-box-js
-						span.days 12
-						span.hours 20
-						span.minutes 20
-						span.seconds 20
+		+e.head
+			+e.head-inner
+				.container  
+					h1 Павел Крёз и Инфо-ДВД  Пассивный доход в РФ. Дивиденды
+					p Выберите удобный пакет участия в тренинге
+					+img("img/head-img.png").d-none.d-xl-block
+		+e.body
+			.container
+				+e.table-wrap
+					table()
+						thead
+							tr 
+								th
+								th Эконом
+								th Мастер-3
+								th Мастер-6
+								th Мастер-12
+								th VIP
+						tbody
+							mixin tr(...tr)
+								tr
+									each td in tr
+										td
+											if td.t
+												!= td.t
+											if td.p
+												.small!= td.p
+											if td.old
+												+e.price-old!= td.old
+											if td.new
+												+e.price-new!= td.new
+											if td.btn
+												+e.btn(href="#")!= td.btn
+							+tr(
+									{t:`Вводный видеокурс «Как копить пассивный доход вместо того, чтобы копить деньги?»`},
+									{t:`∞ →→`},
+									{t:`∞ →→`},
+									{t:`∞ →→`},
+									{t:`∞ →→`},
+									{t:`∞ →→`})
+									
+							+tr(
+									{t:`Основная программа тренинга`},
+									{t:`∞ →→`},
+									{t:`∞ →→`},
+									{t:`∞ →→`},
+									{t:`∞ →→`},
+									{t:`∞ →→`})
+							+tr(
+									{t:`6&nbsp;онлайн-занятий с&nbsp;практикой  на&nbsp;реальном рынке`},
+									{t:`∞`, p: `С 23 мая 2022`},
+									{t:`∞`, p: `С 23 мая 2022`},
+									{t:`∞`, p: `С 23 мая 2022`},
+									{t:`∞`, p: `С 23 мая 2022`},
+									{t:`∞`, p: `С 23 мая 2022`})
+							+tr(
+									{t:`Доступ в&nbsp;мастер-группу Павла Крёза по&nbsp;дивидендным акциям`},
+									{t:`-`},
+									{t:`3 месяца доступа`,p: `С 6 июня 2022`},
+									{t:`6 месяцев доступа`,p: `С 6 июня 2022`},
+									{t:`1 год доступа`,p: `С 6 июня 2022`},
+									{t:`1 год доступа`,p: `С 6 июня 2022`})
+							+tr(
+									{t:`Индивидуальные скайп-сессии с автором`},
+									{t:`-`},
+									{t:`-`},
+									{t:`-`},
+									{t:`-`},
+									{t:`6 сессий`})
+							+tr(
+									{t:`Индивидуальная поддержка в скайпе от автора`},
+									{t:`-`},
+									{t:`-`},
+									{t:`-`},
+									{t:`-`},
+									{t:`1 год`})
+							+tr(
+									{t:`Стоимость пакета`},
+									{old:`33 000`},
+									{old:`42 000`},
+									{old:`47 000`},
+									{old:`54 000`},
+									{old:`140 000`})
+							+tr(
+									{t:`Ваша цена`,p:` Только сегодня, персональное предложение!`},
+									{new:`22 000`},
+									{new:`27 000`},
+									{new:`30 000`},
+									{new:`30 000`},
+									{new:`120 000`})
+							+tr(
+									{p:`<strong> ∞ </strong> бессрочный доступ к материалам<br> <strong>  →→ </strong> моментальный доступ к материалам `},
+									{btn:`Выбрать`},
+									{btn:`Выбрать`},
+									{btn:`Выбрать`},
+									{btn:`Выбрать`},
+									{btn:`Выбрать`})
 
+							//- +tr(
+							//- 		{t:`∞ →→`, p:``},
+							//- 		)
+							
+
+				+e.timer-headline ПОЛУЧИТЕ ДОСТУП ПРЯМО СЕЙЧАС! 
+				+e.inner
+					+e.timer-row.row
+						.col-lg
+							+e.timer-txt ! Персональное предложение со скидкой обновляется каждые 24 часа. Скидка может сгореть при следующем обновлении, которое состоится через:
+						+e.timer-col.col-lg-auto
+							+e.timer-box.timer-box-js
+								span.days 12
+								span.hours 20
+								span.minutes 20 
+								span.seconds 20
+					
 	// end sTariffs
 
-mixin priceTableHeader(base='base',master='master', VIP='VIP')
-	+e.item-txt-col.col-xl-5.col-md-6.col-12.header-txt-col.d-none.d-md-block
-	+e.val-col.offset-xl-1.col-md-2.col-4.base-col.header-col=base
-	+e.val-col.col-md-2.col-4.master-col.header-col.active=master
-	+e.val-col.col-md-2.col-4.vip-col.header-col=VIP
 
-mixin priceTableLine(headline='headline', base='+',master='+', VIP='+')
-	+e.item-txt-col.col-xl-5.col-md-6.col-12=headline
-	+e.val-col.offset-xl-1.col-md-2.col-4=base
-	+e.val-col.col-md-2.col-4=master
-	+e.val-col.col-md-2.col-4=VIP
-
-mixin strokedLine(headline='headline', base='+',master='+', VIP='+')
-	+e.item-txt-col.col-xl-5.col-md-6.col-12=headline
-	+e.val-col.offset-xl-1.col-md-2.col-4.stroked=base
-	+e.val-col.col-md-2.col-4.stroked=master
-	+e.val-col.col-md-2.col-4.stroked=VIP
-
-mixin priceTableFooter(base='base',master='master', VIP='VIP')
-	+e.item-txt-col.col-xl-5.col-md-6.col-12.footer-txt-col.d-none.d-md-block
-	+e.val-col.offset-xl-1.col-md-2.col-4.footer-col
-		+e.A.chose-btn(href="#")=base
-	+e.val-col.col-md-2.col-4.footer-col
-		+e.A.chose-btn(href="#")=master
-	+e.val-col.col-md-2.col-4.footer-col
-		+e.A.chose-btn(href="#")=VIP
