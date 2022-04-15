@@ -1,6 +1,22 @@
 .form-wrap{
 	position: relative;
 	z-index: 4;
+	.inbfrm.v2,
+	.inbfrm.v2 form{
+		padding: 0;
+		background: none !important;
+		margin: 0;
+		border: none !important;
+	}
+	.inbfrm.v2 form input[type="submit"]{
+		@extend .btn, .btn-primary;
+		margin-top: 0;
+	}
+	.inbfrm.v2 form .input_line input{
+
+		@extend .form-control;
+		text-align: left;
+	}
 	&__btn{
 		@extend .btn, .btn-primary;
 		width: 100%;
@@ -12,7 +28,6 @@
 			
 		}
 		&__input{
-			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
  	}

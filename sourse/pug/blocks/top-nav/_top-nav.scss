@@ -5,7 +5,7 @@
 	top: 0;
 	width: 100%;
 	@include mt;
-	z-index: 10;
+	z-index: 1000;
 	&.fixed {
 		background-color: rgba($white, .8);
 	}

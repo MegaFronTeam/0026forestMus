@@ -30,8 +30,11 @@
 		}
 	}
 	.active-text {
-		padding-left: rem(40);
-		padding-right: rem(40);
+		@include media-breakpoint-up(lg) {
+
+			padding-left: rem(40);
+			padding-right: rem(40);
+		}
 		max-width: 440px;
 		font-weight: 500;
 		font-size: rem(20);

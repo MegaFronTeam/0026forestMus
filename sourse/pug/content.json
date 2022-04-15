@@ -1,12 +1,12 @@
 {
 	"nav":[
-		{ "name":"Актуально!", "url":"#"},
-		{	"name":"Как именно?", "url":"#"},
-		{"name":"Что надо делать?", "url":"#"},
-		{"name":"Автор", "url":"#"} ,
+		{ "name":"Актуально!", "url":"#sDividends"},
+		{	"name":"Как именно?", "url":"#sPassiveIncome"},
+		{"name":"Что надо делать?", "url":"#sTeam"},
+		{"name":"Автор", "url":"#sKnowing"} ,
 		{
 			"name":"Программа ", 
-			"url":"#"
+			"url":"#sProgram"
 			}
 	],
 	"social":[

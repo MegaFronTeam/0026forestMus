@@ -4,6 +4,16 @@
 	background-repeat: no-repeat;
 	background-position: left top;
 	background-size: auto auto;
+	position: relative;
+	z-index: 1;
+	@include media-breakpoint-down(md) {
+		&::before{
+			content: '';
+			@include a-cent;
+			z-index: -1;
+			background-color: rgba($color: #fff, $alpha: .8);
+		}
+	}
 		--sPT: #{rem(130)};
 		// --sPB: ;
 		--sTPB: #{rem(25)};

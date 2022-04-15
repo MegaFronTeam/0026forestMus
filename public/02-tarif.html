@@ -9,6 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="//info-dvd.ru/bbm/css/bbm_form.css?20220401" rel="stylesheet" type="text/css"/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
 		<link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="crossorigin"/>
 		<link rel="preload" href="fonts/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin="crossorigin"/>
@@ -22,7 +23,7 @@
 					<div class="sTariffs__head-inner">
 						<div class="container"> 
 							<h1>Павел Крёз и Инфо-ДВД  Пассивный доход в РФ. Дивиденды</h1>
-							<p>Выберите удобный пакет участия в тренинге</p><img src="img/head-img.png" alt="" loading="lazy"/>
+							<p>Выберите удобный пакет участия в тренинге</p><img class="d-none d-xl-block" src="img/head-img.png" alt="" loading="lazy"/>
 						</div>
 					</div>
 				</div>
@@ -275,19 +276,67 @@
 							</div>
 							<div class="col-md-auto">
 								<div class="form-wrap">
-									<form>
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="fullname" type="text" placeholder="Ваше имя" required="required"/>
+									<div class="inbfrm v2" id="bf305">
+										<div id="bf305_inner"> 
+											<form id="bf305_form" action="//info-dvd.ru/bbm/order/divru2022consult/?bform_id=305" method="POST" accept-charset="windows-1251" onsubmit="return bf305.check();">
+												<input type="hidden" name="good_id" value="divru2022consult"/>
+												<input type="hidden" name="bform_id" value="305"/>
+												<input type="hidden" name="comment_author" value=""/>
+												<input type="hidden" name="comment_text" value=""/>
+												<div class="input_line">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control text" name="fullname" type="text" placeholder="Ваше имя" required="required"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="input_line">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control text" name="phone" type="tel" placeholder="+7 ( ____ ) ____ - ___ - ___" required="required"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="input_line">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control text" name="email" type="email" placeholder="E-mail (необязательно)"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="submit_line">
+													<input class="button" type="submit" name="submit" value="Отправить"/>
+												</div>
+											</form>
 										</div>
-										<!-- +e.input-wrap-->
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="phone" type="tel" placeholder="+7 ( ____ ) ____ - ___ - ___" required="required"/>
-										</div>
-										<!-- +e.input-wrap-->
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail (необязательно)"/>
-										</div>
-										<!-- +e.input-wrap-->
-										<button class="form-wrap__btn" type="submit">Отправить
-										</button>
-									</form>
+									</div>
+									<script type="text/javascript">
+										(function (d, w, src, r, c) {
+										var rid = r.toString().substr(2);
+										var n = d.getElementsByTagName("script")[0],s = d.createElement("script"),
+										f = function () { n.parentNode.insertBefore(s, n); };
+										var p=d.location.protocol;if (p!='http:' && p!='https:' && src.indexOf('//')==0){src='http:'+src}
+										s.type = "text/javascript";s.async = true;s.src = src+(src.indexOf('?')==-1 ? '?' : '&')+'r='+rid;
+										if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f();}
+										if (c) { s.addEventListener('load', function (e) { c(null, e); }, false); }
+										})(document, window, "//info-dvd.ru/bbm/js/bbm_form.js", Math.random(), function(){
+										window['bf305'] = new BbmFormMng({
+										id: 'bf305',
+										langs: {
+										errors : {
+										email_pattern: 'Введите корректный адрес электронной почты.',
+										alphanumeric_pattern: 'Может содержать только маленькие английские буквы и цифры',
+										phone_pattern: 'Некорректный формат телефона',
+										zip_pattern: 'Некорректный формат почтового индекса',
+										empty_field: 'Это поле необходимо заполнить.',
+										min_limit: 'Укажите значение не меньше ',
+										//- oferta_warn: 'Необходимо согласиться с условиями публичной оферты!'
+										},
+										processing: 'Обработка...'
+										}, rules: {
+										kupon:['alphanumeric'],
+										phone:['phone', 'required'],
+										email:['required', 'email'],
+										fullname:['required']
+										},
+										phone_verification: false	});
+										});
+										
+									</script>
 								</div>
 							</div>
 							<div class="col-lg">
@@ -301,7 +350,7 @@
 					</div>
 					<div class="sQuestions__policy text-center">
 						Заполняя форму Вы соглашаетесь с условиями
-						<a href="#">пользовательского соглашения</a>
+						<a href="javascript:void(0)" onclick="return window['bf305'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;"> пользовательского соглашения</a>
 					</div>
 				</div>
 			</section>

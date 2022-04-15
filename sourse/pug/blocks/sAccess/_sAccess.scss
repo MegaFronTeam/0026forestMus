@@ -19,9 +19,11 @@
 		align-items: center;
 		justify-content: center;
 		// margin-right: rem(20);
-		margin-bottom: 0;
+		// margin-bottom: 0;
+		margin-right: rem(15);
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(16);
+			margin-right: 0;
 		}
 		position: relative;
 		z-index: 2;
@@ -29,12 +31,20 @@
 		color: $white;
 		flex-shrink: 0;
 	}
+	@include media-breakpoint-up(lg) {
+
+		&__text{
+			max-width: 250px;
+		}
+	}
 	&__step {
 		position: relative;
 		z-index: 5;
 		margin-bottom: rem(30);
+		font-size: 16px;
+
 		@include media-breakpoint-up(xl) {
-			margin-bottom: rem(86);
+			margin-bottom: rem(90);
 		}
 		@include media-breakpoint-down(lg) {
 			display: flex;
@@ -44,28 +54,77 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-		img {
-			position: absolute;
-			z-index: 3;
-			top: 135%;
-			right: 81.3vw;
-			@include media-breakpoint-up(sm) {
-				top: 130%;
-				right: 90.8%;
+		&__row{
+			position: relative;
+			img{
+				position: absolute;
+				// right: rem(0);
+				top: rem(40);
+				left: rem(30);
 			}
-			@include media-breakpoint-up(md) {
-				right: 93.2%;
+		}
+		// img {
+		// 	position: absolute;
+		// 	z-index: 3;
+		// 	top: 135%;
+		// 	right: 81.3vw;
+		// 	@include media-breakpoint-up(sm) {
+		// 		top: 130%;
+		// 		right: 90.8%;
+		// 	}
+		// 	@include media-breakpoint-up(md) {
+		// 		right: 93.2%;
+		// 	}
+		// 	@include media-breakpoint-up(lg) {
+		// 		top: 34%;
+		// 		right: 3%;
+		// 	}
+		// 	@include media-breakpoint-only(lg) {
+		// 		right: -1%;
+		// 		height: 103%;
+		// 		width: 95%;
+		// 		top: 17%;
+		// 	}
+		// }
+
+
+		.form-cont{
+			&__form-txt{
+				@include media-breakpoint-down(lg){
+					max-width: 100%;
+				}
 			}
+		}
+	
+		//policy
+		&__policy{
+			font-weight: 500;
+			font-size: rem(12px);
+			line-height: calc(15/12);
+			text-align: center;
+			color: rgba(#565656, .5);
+	
+			a{ 
+				text-decoration: underline;
+				color: rgba(#565656, .5);
+				&:hover{
+					text-decoration: none;
+					color: #565656;
+				}
+			}
+		}
+		.form-cont{
 			@include media-breakpoint-up(lg) {
-				top: 32%;
-				right: 3%;
+			z-index: 2;
+
+			.col-lg{
+				order: -1;
 			}
-			@include media-breakpoint-only(lg) {
-				right: -1%;
-				height: 103%;
-				width: 95%;
-				top: 17%;
+			img{
+				z-index: -1;
+				left: var(--sp);
 			}
+		}
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

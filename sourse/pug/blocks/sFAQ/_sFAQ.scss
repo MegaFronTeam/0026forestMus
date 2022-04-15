@@ -7,25 +7,28 @@
 		margin-bottom: rem(50);
 		color: #1E1E1E;
 		&__item {
-			padding-top: rem(40);
 			border-bottom:1px solid rgba(#314F9C, .2);
 			&:first-child {
 				border-top:1px solid rgba(#314F9C, .2);
 			}
 			&.active .dd-group__head:after {
-				transform: rotate(180deg);
+				transform: rotate(0);
 			}
 		}
 		&__head {
 			position: relative;
+			padding-top: rem(40);
 			padding-bottom: rem(40);
+			padding-right: rem(30);
 			font-weight: 700;
+			cursor: pointer;
 			font-size: rem(30);
 			&::after {
 				position: absolute;
 				right: 0;
 				content: url('../img/arrow-up.svg');
 				transition: transform .3s ease-in-out;
+				transform: rotateX(180deg);
 			}
 		}
 		&__content {
@@ -45,7 +48,11 @@
 } // end.sFAQ
 
 .info-dvd {
-	padding: rem(56) rem(72) rem(60);
+	@include media-breakpoint-up(md) {
+
+		padding: rem(56) rem(72) rem(60);
+	}
+	padding: rem(56) rem(16) rem(60);
 	background: linear-gradient(332.05deg, rgba(199, 208, 234, 0.37) 19.87%, rgba(0, 117, 255, 0.04) 92.7%);
 	border-radius: 8px;
 	color: #1E1E1E;

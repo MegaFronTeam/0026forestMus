@@ -85,10 +85,67 @@ mixin form-cont()
 					+e.title Успейте оставить заявку на&nbsp;участие в тренинге
 					+e.txt Введите свои данные прямо сейчас 
 			.col-md-auto
-				+form-wrap()
-					+input('Ваше имя', 'text', '', 'fullname')(required)
-					+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required)
-					+input('E-mail (необязательно)', 'email','','email')
-					+e.BUTTON.btn(type="submit") Отправить
+				+b.form-wrap
+						
+						#bf305.inbfrm.v2
+							#bf305_inner 
+								form#bf305_form(action='//info-dvd.ru/bbm/order/divru2022consult/?bform_id=305' method='POST' accept-charset='windows-1251' onsubmit='return bf305.check();')
+									input(type='hidden' name='good_id' value='divru2022consult')
+									input(type='hidden' name='bform_id' value='305')
+									input(type='hidden' name='comment_author' value='')
+									input(type='hidden' name='comment_text' value='')
+									.input_line
+										//- input.text(name='fullname' type='text' value='' placeholder='Ваши ФИО' required='required')
+										+input('Ваше имя', 'text', '', 'fullname')(required).text
+									.input_line
+										+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required).text
+										//- input.text(name='phone' type='text' value='' placeholder='7 ( ____ ) ____ - ___ - ___' required='required')
+									.input_line
+										+input('E-mail (необязательно)', 'email','','email').text
+										//- input.text(name='email' type='email' value='' placeholder='E-mail (необязательно)'  )
+									.submit_line
+										input.button(type='submit' name='submit' value='Отправить')
+									//- .privacy_agreement_block
+									//- 	label
+									//- 		input(type='checkbox' name='oferta_warn' value='1' checked='checked' required='required')
+									//- 		span.ibfm_txt Я согласен с условиями
+									//- 		a(href='javascript:void(0)' onclick="return window['bf305'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;") публичной оферты
+						script(type='text/javascript').
+							(function (d, w, src, r, c) {
+							var rid = r.toString().substr(2);
+							var n = d.getElementsByTagName("script")[0],s = d.createElement("script"),
+							f = function () { n.parentNode.insertBefore(s, n); };
+							var p=d.location.protocol;if (p!='http:' && p!='https:' && src.indexOf('//')==0){src='http:'+src}
+							s.type = "text/javascript";s.async = true;s.src = src+(src.indexOf('?')==-1 ? '?' : '&')+'r='+rid;
+							if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f();}
+							if (c) { s.addEventListener('load', function (e) { c(null, e); }, false); }
+							})(document, window, "//info-dvd.ru/bbm/js/bbm_form.js", Math.random(), function(){
+							window['bf305'] = new BbmFormMng({
+							id: 'bf305',
+							langs: {
+							errors : {
+							email_pattern: 'Введите корректный адрес электронной почты.',
+							alphanumeric_pattern: 'Может содержать только маленькие английские буквы и цифры',
+							phone_pattern: 'Некорректный формат телефона',
+							zip_pattern: 'Некорректный формат почтового индекса',
+							empty_field: 'Это поле необходимо заполнить.',
+							min_limit: 'Укажите значение не меньше ',
+							//- oferta_warn: 'Необходимо согласиться с условиями публичной оферты!'
+							},
+							processing: 'Обработка...'
+							}, rules: {
+							kupon:['alphanumeric'],
+							phone:['phone', 'required'],
+							email:['required', 'email'],
+							fullname:['required']
+							},
+							phone_verification: false	});
+							});
+
+				//- +form-wrap()
+				//- 	+input('Ваше имя', 'text', '', 'fullname')(required)
+				//- 	+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required)
+				//- 	+input('E-mail (необязательно)', 'email','','email')
+				//- 	+e.BUTTON.btn(type="submit") Отправить
 			.col-lg
 				+pic("form-man.png",'',0)
