@@ -1,20 +1,23 @@
 // start .sKnowing
 .sKnowing {
-	background-image: url('../img/knowing-bg.png');
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-size: auto auto;
-	position: relative;
-	z-index: 1;
-	@include media-breakpoint-down(md) {
-		&::before{
-			content: '';
-			@include a-cent;
-			z-index: -1;
-			background-color: rgba($color: #fff, $alpha: .8);
-		}
+	// background-image: url('../img/knowing-bg.png');
+	// background-repeat: no-repeat;
+	// background-position: left top;
+	// background-size: auto auto;
+	// position: relative;
+	// z-index: 1;
+	// @include media-breakpoint-down(md) {
+	// 	&::before{
+	// 		content: '';
+	// 		@include a-cent;
+	// 		z-index: -1;
+	// 		background-color: rgba($color: #fff, $alpha: .8);
+	// 	}
+	// }
+	h4{
+		margin-bottom: rem(50);
 	}
-		--sPT: #{rem(130)};
+		--sPT: 0;
 		// --sPB: ;
 		--sTPB: #{rem(25)};
 	&__about {
@@ -75,7 +78,8 @@
 		height: 100%;
 		img {
 			max-width: 100%;
-			box-shadow: 0px 63px 73px -32px rgba(150, 195, 255, 0.36), 0px 94px 63px -51px rgba(0, 0, 0, 0.27);
+			max-width: rem(700);
+			// box-shadow: 0px 63px 73px -32px rgba(150, 195, 255, 0.36), 0px 94px 63px -51px rgba(0, 0, 0, 0.27);
 			border-radius: 20px;
 		}
 	}
@@ -93,21 +97,21 @@
 		// width: 36px;
 		// height: 36px;
 		border-radius: 50%;
-		background-color: $blue;
+		background-color: #fff;
 		.icon {
-			stroke: $white;
+			stroke: $success;
 			fill: none;
-			font-size: 16px;
+			font-size: 22px;
 		}
 	}
 	.swiper-button-prev {
-		left: 6%;
+		// left: 6%;
 		.icon {
 			transform: translateX(-2px);
 		}
 	}
 	.swiper-button-next {
-		right: 6%;
+		// right: 6%;
 		.icon {
 			transform: rotate(180deg) translateX(-2px);
 		}

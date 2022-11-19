@@ -6,6 +6,8 @@
 	width: 100%;
 	@include mt;
 	z-index: 1000;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	&.fixed {
 		background-color: rgba($white, .8);
 	}
@@ -13,16 +15,16 @@
 		align-items: center;
 	}
 	&__logo {
+		img{
+			width: 40px;
+		}
 		@include media-breakpoint-up(xl) {
-			margin-right: rem(209);
+			margin-right: rem(102);
 		}
 	}
 	&__btn {
-		@extend .btn, .btn-sm, .btn-primary;
-		text-transform: uppercase;
-		border-radius: 4px;
-		font-size: 14px;
-		font-weight: 900;
+		@extend .btn, .btn-sm, .btn-success;  
+		font-size: 16px;
 	}
 
 	p{
@@ -56,7 +58,13 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		&__btn{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		
+	}
 
 	@include media-breakpoint-down(xs) {}
 }

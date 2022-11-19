@@ -3,28 +3,30 @@ mixin sAccess(data)
 	+b.SECTION.sAccess.section#sAccess&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Как получить доступ ко&nbsp;всему комплекту обучения прямо сегодня?
+				p Подробно об участии
+				h2 Как стать участником тренинга  Инфо-ДВД и&nbsp;Яны Мусийко #[span.text-primary &laquo;Криптотрейдинг на&nbsp;миллион&raquo;?]
 			+e.row.row
 				+img('img/access-bg.svg')(class="d-none d-lg-block")
 				mixin step(number,text)
 					+e.step&attributes(attributes)
 						+e.number= number
-						+e.text= text
+						+e.text!= text
 				.col-lg-4.col-md-6
-					+step('1','Заполните форму и нажмите кнопку «Продолжить».')
+					+step('1',`Внимательно заполните форму ниже и&nbsp;нажмите кнопку &laquo;Продолжить&raquo;.`)
 				.col-lg-4.col-md-6
-					+step('2','Вам откроется страница с тарифами и доступными сейчас скидками')
+					+step('2',`Сразу после этого Вам откроется страница с&nbsp;тарифами и&nbsp;доступными Вам скидками`)
 				.col-lg-4.col-md-6
-					+step('3','Если необходимо, Вас проконсультирует менеджер Инфо-ДВД по указанному Вами номеру телефона')
+					+step('3',`Если необходимо, Вы&nbsp;получите бесплатную консультацию от&nbsp;специалиста Инфо-ДВД по&nbsp;указанному Вами номеру телефона`)
 				.col-lg-4.col-md-6.order-last
 				.col-lg-4.col-md-6.order-lg-last
-					+step('4','Выберите тариф участия, оплатите его стоимость')
+					+step('4','Выберите подходящий тариф участия, оплатите его стоимость')
 				.col-lg-4.col-md-6.order-lg-last
-					+step('5','Уже через одну минуту после оплаты Вам откроется доступ в закрытый раздел группы тренинга с обучающими материалами')(class="dashed-none")
-			
-			+form-cont()
-			+e.policy.text-center
-				| Заполняя форму Вы соглашаетесь с условиями
-				|
-				a(href='javascript:void(0)' onclick="return window['bf305'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;")  пользовательского соглашения
-	// end sAccess
+					+step('5',`Уже через одну минуту после оплаты Вам откроется доступ в&nbsp;закрытую обучающую группу с&nbsp;материалами тренинга`)(class="dashed-none")
+		+e.form-wrap
+			.container
+				+form-cont()
+				//- +e.policy.text-center
+				//- 	| Заполняя форму Вы соглашаетесь с условиями
+				//- 	|
+				//- 	a(href='javascript:void(0)' onclick="return window['bf305'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;")  пользовательского соглашения
+	// end sAccessё

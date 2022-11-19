@@ -6,7 +6,7 @@ let  publicPath = 'public',
 import pkg from 'gulp'
 const { gulp, src, dest, parallel, series, watch } = pkg
 
-import del  from 'del' 
+import {deleteAsync} from 'del';
 import pug  from 'gulp-pug'
 import notify  from 'gulp-notify' 
 import svgmin  from 'gulp-svgmin'
@@ -21,7 +21,7 @@ import dartSass      from 'sass'
 const  sass          = gulpSass(dartSass)
 import tabify  from 'gulp-tabify' 
 import gcmq  from 'postcss-sort-media-queries' 
-import bssi from 'browsersync-ssi'
+// import bssi from 'browsersync-ssi'
 import browserSync  from 'browser-sync'
 import postcss  from 'gulp-postcss'
 import autoprefixer  from 'autoprefixer'
@@ -51,7 +51,8 @@ function browsersync() {
 }
 
 function cleanFolders() {
-    return del([publicPath + '/parts' ], { force: true })
+    // return del([publicPath + '/parts' ], { force: true })
+    return  deleteAsync([publicPath + '/parts' ]);
 }
 
 function pugFiles() {
@@ -70,8 +71,8 @@ function pugFiles() {
     .on('end', browserSync.reload); 
 }
 
-function cleanlibs() {
-    return del([publicPath + '/libs'], { force: true })
+function cleanlibs() { 
+    return  deleteAsync([publicPath + '/libs']);
 }
 
 function copyLibs() {
@@ -213,7 +214,8 @@ function svgCopy() {
 
 function cleanimg() {
     const path = publicPath + '/img';
-    return del([path + '/@*'], { force: true })
+    // return del([path + '/@*'], { force: true });
+    return  deleteAsync([path + '/@*']);
 }
 
 const path2 = `${publicPath}/img/@2x/`;

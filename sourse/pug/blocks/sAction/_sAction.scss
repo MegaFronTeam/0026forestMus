@@ -1,12 +1,37 @@
 // start .sAction
 .sAction {
-	background: linear-gradient(332.05deg, rgba(199, 208, 234, 0.37) 19.87%, rgba(0, 117, 255, 0.04) 92.7%);
+	@extend .bg;
+	padding-bottom: 0;
+	@include media-breakpoint-up(xl) {
+
+		background: linear-gradient(176.38deg, #F2F7F9 20.61%, rgba(241, 246, 248, 0) 27.34%), url(../img/action-bg.png), radial-gradient(36.41% 68.21% at 13.59% 63.65%, #F1F6F8 23.86%, #F1F6F8 100%);
+	}
+	h2{
+		margin-bottom: rem(40);
+	}
+	.section-title{
+		p{
+
+			font-size: rem(24);
+			font-weight: 600;
+		}
+	}
+	p{
+		font-size: rem(20);
+		// font-weight: 600;
+		color: $secondary;
+	} 
+	strong{
+		font-weight: bold;
+		color: #303435;
+
+	}
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
 	&__centred-block {
-		margin: 0 auto;
-		max-width: 900px;
+		// margin: 0 auto;
+		max-width: 930px;
 		.btn {
 			margin-top: rem(30);
 		}
@@ -73,6 +98,13 @@
 				margin-bottom: rem(20);
 			}
 		}
+	}
+	.btn{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(545);
+		bottom: rem(-26);
 	}
 @include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

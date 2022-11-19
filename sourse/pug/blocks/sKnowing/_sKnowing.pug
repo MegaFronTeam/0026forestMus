@@ -2,66 +2,43 @@ mixin sKnowing(data)
 	// start sKnowing
 	+b.SECTION.sKnowing.section#sKnowing&attributes(attributes)
 		.container
-			p.section-subtitle Автор
-			+b.section-title
-				h2 Знакомьтесь: Павел Крёз
-			+e.about.row
-				+e.img-wrap.col-xl-6
-					+img('img/knowing-img.png')
-				.col-xl-6
-					ul
-						li <strong>Частный инвестор,</strong> публичная инвестиционная практика с&nbsp;2018 года
-						li <strong>Организатор инвестиционного сообщества,</strong> ведёт свою мастер-группу с&nbsp;2019 года (более 500&nbsp;человек)
-						li <strong>Топ-автор Инфо-ДВД.</strong> Кредо&nbsp;&mdash; продуманные инвестиции с&nbsp;минимальными рисками и&nbsp;минимальным участием эмоций
-						li <strong>С&nbsp;2004 по&nbsp;2016 год работал в&nbsp;банковской сфере,</strong> сделал успешную карьеру в&nbsp;одном из&nbsp;крупнейших федеральных банков.
-						li <strong>Специалист по&nbsp;работе с&nbsp;предприятиями</strong> сегмента крупного и&nbsp;крупнейшего бизнеса.
-					p По&nbsp;многочисленному мнению учеников, Павел Крёз&nbsp;&mdash; один из&nbsp;самых компетентных и&nbsp;востребованных авторов Издательства Инфо-ДВД, умеющий упрощать сложные процессы и&nbsp;доносить даже самую сложную информацию понятным языком!
-			h3 Об&nbsp;этом говорят их&nbsp;многочисленные отзывы:
+			//- p.section-subtitle Автор
+			//- +b.section-title
+			//- 	h2 Знакомьтесь: Павел Крёз
+			//- +e.about.row
+			//- 	+e.img-wrap.col-xl-6
+			//- 		+img('img/knowing-img.png')
+			//- 	.col-xl-6
+			//- 		ul
+			//- 			li <strong>Частный инвестор,</strong> публичная инвестиционная практика с&nbsp;2018 года
+			//- 			li <strong>Организатор инвестиционного сообщества,</strong> ведёт свою мастер-группу с&nbsp;2019 года (более 500&nbsp;человек)
+			//- 			li <strong>Топ-автор Инфо-ДВД.</strong> Кредо&nbsp;&mdash; продуманные инвестиции с&nbsp;минимальными рисками и&nbsp;минимальным участием эмоций
+			//- 			li <strong>С&nbsp;2004 по&nbsp;2016 год работал в&nbsp;банковской сфере,</strong> сделал успешную карьеру в&nbsp;одном из&nbsp;крупнейших федеральных банков.
+			//- 			li <strong>Специалист по&nbsp;работе с&nbsp;предприятиями</strong> сегмента крупного и&nbsp;крупнейшего бизнеса.
+			//- 		p По&nbsp;многочисленному мнению учеников, Павел Крёз&nbsp;&mdash; один из&nbsp;самых компетентных и&nbsp;востребованных авторов Издательства Инфо-ДВД, умеющий упрощать сложные процессы и&nbsp;доносить даже самую сложную информацию понятным языком!
+			.text-center
+				h4 Вот, что пишут трейдеры, которым повезло сотрудничать с&nbsp;Яной или учиться у&nbsp;нее:
 			+e.slider--js.swiper
 				.swiper-wrapper
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-1.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-2.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-3.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-4.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-5.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-6.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-7.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-8.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-9.png')
-					.swiper-slide
-						+e.slide-wrap
-							+img('img/rew-10.png')
+					mixin item(x)
+						.swiper-slide
+							+e.slide-wrap
+								+pic(`rew-${x}.jpg`)
+					- for (var x = 1; x < 13; x++)
+						+item(x)
 				.swiper-pagination
 				+arrow()
-			h3 Как проходит обучение?
-			+e.program.row
-				.col-sm-6.col-lg-3.position-relative
-					p Доступ в&nbsp;закрытую группу Инфоклуба, в&nbsp;которой Вас уже ждут видеоуроки Вводного видеокурса и&nbsp;Основной программы обучения
-				.col-sm-6.col-lg-3.position-relative
-					p В&nbsp;группе ведется поддержка. Можно писать вопросы, отвечает автор с&nbsp;помощниками
-				.col-sm-6.col-lg-3.position-relative
-					p Онлайн-занятия, применение стратегии на реальном рынке, с 23 мая по 3 июня
-				.col-sm-6.col-lg-3.position-relative
-					p Мастер-группа с&nbsp;июня 2022. Круглогодичная практика, 2&nbsp;онлайн-занятия в&nbsp;месяц. Из&nbsp;них:
-						ul
-							li Одно занятие выделяется для ответов на&nbsp;вопросы участников
-							li Одно занятие полностью выделяется на&nbsp;поиск и&nbsp;анализ акций для регулярного добора в&nbsp;портфель
+			//- h3 Как проходит обучение?
+			//- +e.program.row
+			//- 	.col-sm-6.col-lg-3.position-relative
+			//- 		p Доступ в&nbsp;закрытую группу Инфоклуба, в&nbsp;которой Вас уже ждут видеоуроки Вводного видеокурса и&nbsp;Основной программы обучения
+			//- 	.col-sm-6.col-lg-3.position-relative
+			//- 		p В&nbsp;группе ведется поддержка. Можно писать вопросы, отвечает автор с&nbsp;помощниками
+			//- 	.col-sm-6.col-lg-3.position-relative
+			//- 		p Онлайн-занятия, применение стратегии на реальном рынке, с 23 мая по 3 июня
+			//- 	.col-sm-6.col-lg-3.position-relative
+			//- 		p Мастер-группа с&nbsp;июня 2022. Круглогодичная практика, 2&nbsp;онлайн-занятия в&nbsp;месяц. Из&nbsp;них:
+			//- 			ul
+			//- 				li Одно занятие выделяется для ответов на&nbsp;вопросы участников
+			//- 				li Одно занятие полностью выделяется на&nbsp;поиск и&nbsp;анализ акций для регулярного добора в&nbsp;портфель
 	// end sKnowing

@@ -1,0 +1,66 @@
+// start .s5Steps
+.s5Steps {
+	// --sPT: #{rem()};
+	@include media-breakpoint-up(xl) {
+
+		--sPB: #{rem(128)};
+	}
+	// --sTPB: #{rem()};
+	@extend .bg;
+	@include media-breakpoint-up(xl) {
+
+		background: linear-gradient(176.38deg, #F2F7F9 20.61%, rgba(241, 246, 248, 0) 27.34%), url(../img/svg/bg-bg.jpg), radial-gradient(36.41% 68.21% at 13.59% 63.65%, #F1F6F8 23.86%, #F1F6F8 100%);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	li{
+		list-style: none;
+		font-weight: bold;
+		letter-spacing: 0.01em;
+
+		color: $secondary;
+		&::before{
+			content: url(../img/svg/mark.svg);
+			position: relative;
+			top: rem(8);
+			margin-bottom: 24px;
+			margin-right: 5px;
+		}
+	}
+	&__body{
+		position: relative;
+		max-width: 617px;
+		margin-bottom: 40px;
+		picture{
+			text-align: center;
+		}
+		@include media-breakpoint-up(lg) {
+
+			img{
+				@include a-cent1(y);
+				left: 80%;
+				max-width: none;
+				width: auto;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.s5Steps

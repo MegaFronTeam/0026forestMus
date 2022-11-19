@@ -9,24 +9,34 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sWhy/_sWhy.pug
 include ../blocks/sReasons/_sReasons.pug
 include ../blocks/sPracticum/_sPracticum.pug
-include ../blocks/sDividends/_sDividends.pug
-include ../blocks/sPassiveIncome/_sPassiveIncome.pug
-include ../blocks/sMainInvestment/_sMainInvestment.pug
-include ../blocks/sBenefits/_sBenefits.pug
-include ../blocks/sRussianStocks/_sRussianStocks.pug
-include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sDividends/_sDividends.pug
+//- include ../blocks/sPassiveIncome/_sPassiveIncome.pug
+//- include ../blocks/sMainInvestment/_sMainInvestment.pug
+//- include ../blocks/sBenefits/_sBenefits.pug
+//- include ../blocks/sRussianStocks/_sRussianStocks.pug
+//- include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sKnowing/_sKnowing.pug
-include ../blocks/sProgram/_sProgram.pug
-include ../blocks/sAdvantages/_sAdvantages.pug
-include ../blocks/sNeeded/_sNeeded.pug
+//- include ../blocks/sProgram/_sProgram.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sNeeded/_sNeeded.pug
+include ../blocks/sEasy/_sEasy.pug
+include ../blocks/sHowLearn/_sHowLearn.pug
 include ../blocks/sAccess/_sAccess.pug
 include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sAction/_sAction.pug
+include ../blocks/sForYou/_sForYou.pug
+include ../blocks/sWhatLearn/_sWhatLearn.pug
+include ../blocks/sReallyImportant/_sReallyImportant.pug
+include ../blocks/s5Steps/_s5Steps.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
+include ../blocks/sWhatThink/_sWhatThink.pug
+include ../blocks/sEarnMoney/_sEarnMoney.pug
+include ../blocks/sHowMuch/_sHowMuch.pug
+include ../blocks/sAuthor/_sAuthor.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -39,32 +49,35 @@ block pagecontent
 
 	+top-nav()
 	+headerBlock
-	+sWhy()
-	+sReasons()
+	+sWhatThink
 	+sPracticum()
-	+sDividends()
-	+sPassiveIncome()
-	+sMainInvestment()
-	+sBenefits()
-	+sRussianStocks()
-	+sTeam()
+	+sEarnMoney
+	+sHowMuch
+	+sAuthor
 	+sKnowing()
-	+sProgram()
-	+sAdvantages()
-	+sNeeded()
+
+	+sEasy
+	+sHowLearn
+	
+	//- +sWhy()
+	//- +sReasons()
+	//- +sDividends()
+	//- +sPassiveIncome()
+	//- +sMainInvestment()
+	//- +sBenefits()
+	//- +sRussianStocks()
+	//- +sTeam()
+	//- +sProgram()
+	//- +sAdvantages()
+	//- +sNeeded()
+
+	+s5Steps
+	+sReallyImportant
+	+sWhatLearn
+	+sForYou
 	+sAccess()
 	+sFAQ()
-	+sAction()
-	//- +sForm()
-	//- - let list = items[0].title
-	//- p= list
-	.container
-		//- each item in items
-		//- 	li 
-		//- 		h2= item.title
-		//- 		p= item.text
-	//- +sContact()
-	
+	+sAction() 
 	+footer()
       
 

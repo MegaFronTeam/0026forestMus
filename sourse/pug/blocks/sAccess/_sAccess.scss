@@ -1,16 +1,36 @@
 // start .sAccess
 .sAccess {
+	--sPT: 0;
 	.container {
 		position: relative;
 	}
+	h2{
+		max-width: 1200px;
+	}
 	.section-title {
 		margin-bottom: rem(60);
+		p{
+			// font-size: rem(24);
+			@include rfs(24px);
+			margin-bottom: 24px;
+			color: $secondary;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			font-weight: 600;
+			&::after{
+				content: url(../img/arrow.png);
+				margin-bottom: -20px;
+			}
+		}
 	}
 	&__number {
-		font-size: rem(40);;
+		font-size: rem(24);
 		border-radius: 50%;
 		width: rem(81);
 		height: rem(81);
+		font-weight: 600;
 		// @include media-breakpoint-up(md) {
 		// 	width: rem(81px);
 		// 	height: rem(81px);
@@ -27,8 +47,9 @@
 		}
 		position: relative;
 		z-index: 2;
-		background-color: $blue;
-		color: $white;
+		background-color: #fff;
+		border: 2px dashed;
+		color: $success;
 		flex-shrink: 0;
 	}
 	@include media-breakpoint-up(lg) {
@@ -40,11 +61,11 @@
 	&__step {
 		position: relative;
 		z-index: 5;
-		margin-bottom: rem(30);
+		margin-bottom: rem(5);
 		font-size: 16px;
 
 		@include media-breakpoint-up(xl) {
-			margin-bottom: rem(90);
+			margin-bottom: rem(38);
 		}
 		@include media-breakpoint-down(lg) {
 			display: flex;
@@ -60,7 +81,8 @@
 				position: absolute;
 				// right: rem(0);
 				top: rem(40);
-				left: rem(30);
+				left: 50%;
+				transform: translateX(-50%);
 			}
 		}
 		// img {
@@ -113,16 +135,33 @@
 				}
 			}
 		}
+		&__form-wrap{
+			position: relative;
+			margin-top: 100px;
+			// padding-top: rem(60);
+			&::before{
+				content: url(../img/form-after.png);
+				@include a-cent1;
+			}
+			// background-image: url(../img/form-after.png);
+			// background-repeat: no-repeat;
+			// background-position: center center;
+		}
+		
 		.form-cont{
+
 			@include media-breakpoint-up(lg) {
 			z-index: 2;
-
+				&__col,
 			.col-lg{
 				order: -1;
 			}
 			img{
 				z-index: -1;
-				left: var(--sp);
+				left: 50%;
+				transform: translate(-50%,-50%);
+				top: 40%;
+				pointer-events: none;
 			}
 		}
 		}

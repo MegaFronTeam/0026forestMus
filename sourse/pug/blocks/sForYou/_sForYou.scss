@@ -1,0 +1,60 @@
+// start .sForYou
+.sForYou {
+		// --sPT: ;
+		--sPB: 0;
+		--sTPB: #{rem(70)};
+		.container{
+			max-width: rem(1113);
+		}
+		ol{
+			counter-reset: num;
+			border-top: 1px solid $secondary;
+			padding-left: 0;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: rem(50px);
+	li{
+		position: relative; 
+		padding-left: rem(37 + 44);
+		border-bottom: 1px solid $secondary;
+		padding-top: rem(36);
+		padding-bottom: rem(36);
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			color: $success;
+			@include a-cent1(y);
+			left: 0;
+			color: $success; 
+			// font-weight: bold;
+			@include rfs(78px);
+		}
+		strong{
+			@extend h4;
+			line-height: 150%;
+			font-weight: 600;
+			margin-bottom: rem(8);
+		}
+		p{
+			font-size: rem(20);
+			color: $secondary;
+		}
+	}
+		}
+		li{
+			list-style: none;
+		}
+		&__footer{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 780px;
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sForYou

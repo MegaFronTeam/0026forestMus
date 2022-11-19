@@ -2,7 +2,7 @@
 	@include media-breakpoint-up(lg) {
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(40px);
 		flex-wrap: wrap;
 	}
 
@@ -21,7 +21,8 @@
 		padding: rem(10) calc(var(--bs-gutter-x) / 2);
 		font-size: 16px;
 		font-weight: 500;
-		color: #1E1E1E;
+		color: $body-color;
+		font-weight: bold;
 	}
 }
 

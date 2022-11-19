@@ -1,0 +1,25 @@
+// start .sWhatLearn
+.sWhatLearn {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		@extend .bg;
+		.row{
+
+			--bs-gutter-x: #{rem(40px)};
+			--bs-gutter-y: #{rem(45px)};
+		}
+		img{
+			margin-bottom: rem(30)
+		}
+		p{
+			font-size: 16px;
+		}
+		@include media-breakpoint-up(xl) {}
+		@include media-breakpoint-up(lg) {}
+		@include media-breakpoint-up(md) {}
+		@include media-breakpoint-up(sm) {}
+		@include media-breakpoint-between(md, xl) {}
+		@include media-breakpoint-only(xl) {}
+		@include media-breakpoint-down(xl) {}
+	} // end.sWhatLearn

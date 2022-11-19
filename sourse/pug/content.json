@@ -1,13 +1,10 @@
 {
 	"nav":[
-		{ "name":"Актуально!", "url":"#sDividends"},
-		{	"name":"Как именно?", "url":"#sPassiveIncome"},
-		{"name":"Что надо делать?", "url":"#sTeam"},
-		{"name":"Автор", "url":"#sKnowing"} ,
-		{
-			"name":"Программа ", 
-			"url":"#sProgram"
-			}
+		{ "name":"О тренинге", "url":"#sPracticum"},
+		{	"name":"О деньгах", "url":"#sEarnMoney"},
+		{"name":"Об авторе", "url":"#sAuthor"},
+		{"name":"О программе", "url":"#sHowLearn"} ,
+		{ "name":"#ЯНАНАУЧИТ ",  "url":"#sWhatLearn"}
 	],
 	"social":[
 		"fb","instagram","telegram"

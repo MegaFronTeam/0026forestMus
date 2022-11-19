@@ -2,9 +2,15 @@
 .sPracticum {
 		--sPT: #{rem(52)};
 		--sPB: 0;
-		// --sTPB: ;
-	.section-subtitle {
-		margin-bottom: rem(15);
+		margin-bottom: rem(80);
+		@extend .bg;
+		--sTPB: 15px;
+	.section-title {
+		// margin-bottom: rem(15);
+		p{
+
+			max-width: rem(720);
+		}
 	}
 	.row {
 		margin-bottom: rem(35);
@@ -41,6 +47,26 @@
 			margin-bottom: rem(30);
 		}
 	}
+
+	&__col{
+		font-weight: 500;
+		font-size: rem(16);
+		margin-top: rem(80);
+		img{
+			width: rem(44);
+			margin-bottom: rem(10);
+			display: block;
+		}
+	}
+	&__footer{
+		img{
+			max-width: rem(880);
+		}
+		.btn{
+			margin-bottom: rem(-23);
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

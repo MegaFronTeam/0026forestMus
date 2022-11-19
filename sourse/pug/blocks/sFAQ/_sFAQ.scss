@@ -7,28 +7,47 @@
 		margin-bottom: rem(50);
 		color: #1E1E1E;
 		&__item {
-			border-bottom:1px solid rgba(#314F9C, .2);
+			border-bottom:1px solid rgba($success, .2);
 			&:first-child {
-				border-top:1px solid rgba(#314F9C, .2);
+				border-top:1px solid rgba($success, .2);
 			}
 			&.active .dd-group__head:after {
 				transform: rotate(0);
+			}
+			&.active{
+				--rot: 0;
 			}
 		}
 		&__head {
 			position: relative;
 			padding-top: rem(40);
 			padding-bottom: rem(40);
-			padding-right: rem(30);
+			padding-right: rem(45);
 			font-weight: 700;
 			cursor: pointer;
 			font-size: rem(30);
+			
+		}
+		&__toggle{
+			width: 2rem;
+			height: 2rem;
+			position: absolute;
+			right: 0;
+			top: rem(45);
+			&::before,
 			&::after {
+				content: '';
 				position: absolute;
-				right: 0;
-				content: url('../img/arrow-up.svg');
+				width: 2rem;
+				height: 2px;
+				top: 50%;
+				background-color: $success;
+				margin-top: -1px;
 				transition: transform .3s ease-in-out;
-				transform: rotateX(180deg);
+				// transform: rotateX(180deg);
+			}
+			&::after{
+				transform: rotate(var(--rot,90deg));
 			}
 		}
 		&__content {

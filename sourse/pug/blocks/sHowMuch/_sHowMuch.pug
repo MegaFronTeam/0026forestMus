@@ -1,0 +1,41 @@
+mixin sHowMuch(data)
+	// start sHowMuch
+	+b.SECTION.sHowMuch.section.bg#sHowMuch&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сколько Вы будете зарабатывать?
+			p Опытные трейдеры знают, что любые попытки ответить на этот вопрос обречены на провал.
+			p Мало того, по закону мы не имеем права обещать какие-либо конкретные цифры заработка.
+			p Мы можем лишь показать результаты применения стратегии на реальных сделках, которые были публично зафиксированы в трейдерском чате Яны:
+
+
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin item(x)
+						.swiper-slide
+							+e.slide-wrap
+								+pic(`howmuch-${x}.png`)
+					- for (var x = 1; x < 5; x++)
+						+item(x)
+					- for (var x = 6; x < 31; x++)
+						+item(x)
+					- for (var x = 32; x < 41; x++)
+						+item(x)
+					- for (var x = 47; x < 50; x++)
+						+item(x)
+				.swiper-pagination
+				+arrow()
+				
+			+e.row.row
+				mixin item(i,t)
+					+e.col.col-sm-4
+						
+						+e.img-wrap2: +img(`img/q-${i}.png`)
+						p!= t
+				+item(`1`,`Хотите увеличить процент прибыльных сделок в&nbsp;своей торговле?`)
+				+item(`2`,`Хотите узнать, как правильно формировать сценарий для ювелирного входа и&nbsp;выхода?`)
+				+item(`3`,`Хотите научиться совершать такие&nbsp;же сделки?`)
+			+b.section-footer
+				.small Тогда скорее жмите на кнопку:
+				+e.btn(href="#sAccess") Хочу научиться прибыльно торговать криптовалютами
+	// end sHowMuch

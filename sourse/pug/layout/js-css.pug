@@ -3,11 +3,11 @@ mixin allcss()
 	link(href="libs/swiper/swiper.min.css", rel="stylesheet")
 	link(href="libs/@fancyapps/ui/fancybox.css", rel="stylesheet")
 	link(href='//info-dvd.ru/bbm/css/bbm_form.css?20220401' rel='stylesheet' type='text/css')
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 	link(href=`css/main.min.css?v=${version}`, rel="stylesheet")
 
-	link(rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin)
-	link(rel="preload" href="fonts/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin)
-	link(rel="preload" href="fonts/Manrope-ExtraBold.woff2" as="font" type="font/woff2" crossorigin)
 
 mixin allcjs() 
 	script(src="libs/jquery/jquery.min.js")

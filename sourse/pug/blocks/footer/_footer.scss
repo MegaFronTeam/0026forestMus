@@ -1,7 +1,7 @@
 .footer {
 	position: relative;
-	background-color: #EEEFF2;		
-	margin-top: auto;
+	// background-color: #EEEFF2;		
+	margin-top: rem(50);
 	padding: rem(65) 0 rem(56);
 	color: $black;
 	a {
@@ -33,7 +33,7 @@
 		}
 	}
 
-	background: #EDEDF5;
+	// background: #EDEDF5;
 	// color: $body-color;
 	@extend .section;
 
@@ -57,10 +57,10 @@
 		font-weight: bold;
 		line-height: 1.68;
 		a{
-			border-bottom: 1px solid;
+			// border-bottom: 1px solid;
 			line-height: 1;
 			&:hover{
-				border-color: transparent;
+				// border-color: transparent;
 			}
 		}
 	}

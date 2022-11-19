@@ -1,0 +1,129 @@
+// start .sAuthor
+.sAuthor {
+	--sPT: #{rem(140)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+		p{
+			font-size: 16px;
+			&:not(:last-child){
+
+				margin-bottom: rem(75);
+			}
+		}
+	}
+	.section-title{
+		
+	}
+	&__col{
+		position: relative;
+		padding-top: 96px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&--start{
+			padding-left: 42px;
+
+		}
+		&--start::before{
+			content: '';
+			width: calc(100% + var(--bs-gutter-x));
+			border-top: 2px solid $primary;
+			border-left: 2px solid $primary;
+			position: absolute;
+			height: 150px;
+			left: 16px;
+			top: 60px;
+		}
+		
+
+		&--end{
+			padding-right: 42px;
+
+		}
+		&--end::before{
+			content: '';
+			width: calc(100% + var(--bs-gutter-x));
+			border-bottom: 2px solid $primary;
+			border-right: 2px solid $primary;
+			position: absolute;
+			height: 150px;
+			right: 16px;
+			bottom: 0;
+		}
+
+	}
+	&__item{
+
+	}
+	strong{
+		font-weight: 700;
+		font-size: 16px;
+	}
+	&__block{
+		background: linear-gradient(180deg, #7EC13D 0%, #51891B 100%);
+		border-radius: rem(40px);
+		margin-bottom: rem(84);
+		@include media-breakpoint-up(lg) {
+		padding: rem(40);
+	}
+		padding: rem(30);
+		margin-top: rem(90);
+		position: relative;
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 0;
+		}
+	}
+	&__text{
+		// max-width: rem(590);
+		.h3{
+			@include media-breakpoint-up(lg) {
+				
+				max-width: rem(490);
+			}
+			margin-bottom: rem(40);
+		}
+		p{
+			
+			@include media-breakpoint-up(lg) {
+				padding-right: rem(460);
+			}
+		}
+	}
+	&__img-wrap{
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		position: relative;
+		.text{
+			position: absolute;
+			right: rem(-40px);
+			bottom: rem(-150px);
+			max-width: calc(130%);
+		}
+	}
+	&__label{
+		font-size: 16px;
+		padding: rem(28) 5%;
+		font-weight: bold;
+		.row{
+			align-items: center;
+		}
+		border-radius: rem(75);
+		border: 1px solid  $success;
+	}	
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAuthor

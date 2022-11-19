@@ -1,0 +1,25 @@
+// start .sReallyImportant
+.sReallyImportant {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+		&__item{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 960px;
+			margin-bottom: 45px;
+		}
+		.section-footer{
+			.h5{
+				max-width: 780px;
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sReallyImportant

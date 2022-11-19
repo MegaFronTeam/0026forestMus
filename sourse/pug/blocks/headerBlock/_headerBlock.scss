@@ -4,17 +4,21 @@
 	padding-top: 8.5%;
 	}
 	padding-top: 60px;
-	margin-bottom: 1px;
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
-	background-image: url(../img/head-bg.png);
+	padding-bottom: 45px;
+	// background-position: 50% -50%;
+	@include media-breakpoint-up(lg){
+		background-image: url(../img/head-bg.svg);
+		padding-bottom: 450px;
+
+		background-position: bottom;
+	}
 	// background-color: #000000;
 	&__body{
-		z-index: 2;
-		position: relative;
-		img{
-			z-index: -1;
-		}
+		// z-index: 5;
+		// position: relative;
+		
 	}
 	&__inner {
 		position: relative;
@@ -26,41 +30,82 @@
 		}
 		p {
 			margin-bottom: $grid-gutter-width;
-			max-width: 500px;
-			font-size: rem(24);
+			max-width: 712px;
+			font-size: rem(20);
 			font-weight: 700;
-			line-height: 140%;
+			// line-height: 140%;
+			letter-spacing: 0.01em; 
+			color: #6F7C81;
+
 		}
 
+		ul{
+			margin-bottom: 46px;
+			li{
+				font-weight: 500;
+				color: $secondary;
+				margin-bottom: rem(13);
+				max-width: rem(440);
+				list-style: none;
+				display: flex;
+				&::before{
+					content: var(--marker);
+					margin-right: 23px;
+				}
+				&:nth-child(1){
+					--marker: url(../img/mortarboard.svg)
+				}
+				
+				&:nth-child(2){
+					--marker: url(../img/bar-chart.svg)
+				}
+				&:nth-child(3){
+					--marker: url(../img/space-rocket-launch.svg)
+				}
+
+			}
+		}
 		.btn {
-			margin-bottom: rem(91);
+			line-height: 1;
+			@include media-breakpoint-down(lg){
+				display: block;
+				max-width: max-content;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			@include media-breakpoint-up(lg){
+
+				margin-bottom: rem(91);
+			}
+			margin-bottom: rem(31);
 		}
 	}
 	h1 {
 		max-width: 710px;
 		margin-bottom: $grid-gutter-width;
 		font-weight: 900;
-		line-height: 96.3%;
-		text-transform: uppercase;
-		letter-spacing: rem(-4);
+		line-height: calc(65 / 60); 
+		// letter-spacing: rem(-4);
 	}
 	&__img-wrap {
+		
 		@include media-breakpoint-up(lg) {
-		bottom: 0;
+		// bottom: 0;
+		top: rem(-60);
     position: absolute;
     z-index: 10;
 		right: -30%;
 	}
 	@include media-breakpoint-up(xl) {
-			right: -10%;
+			right: -5%;
 			// bottom: -10%;
 		}
 		@include media-breakpoint-down(lg) {
-			z-index: -1;
+			// z-index: -1;
 			position: relative;
 			max-width: 100%;
 			// margin-top: -45%;
-			margin-top: -60px;
+			margin-bottom: -60px;
 			img {
 				max-width: 100%;
 				object-position: center top;
@@ -159,7 +204,19 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		h1{
+			// font-size: calc(1.2rem + 3vw);
+		}
+		&__body{
+			display: flex;
+			flex-direction: column;
+			ul,
+			p{	
+				order: 2;
+			}
+		}
+	}
 
 	@include media-breakpoint-down(xs) {}
 
